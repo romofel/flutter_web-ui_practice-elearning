@@ -57,20 +57,58 @@ class HomePage extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                Container(
-                  child: Row(
-                    children: [
-                      const Text(
-                        'Sign up',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
+                Stack(
+                  children: [
+                    Transform.translate(
+                      offset: Offset(0, 12),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 43, vertical: 26),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(40),
+                          color: Colors.red,
+                          // gradient: LinearGradient(
+                          //   begin: AlignmentDirectional.topCenter,
+                          //   end: AlignmentDirectional.bottomCenter,
+                          //   colors: [
+                          //     Color(0xffC2B8FF),
+                          //     Color(0xff8A78F0),
+                          //   ],
+                          // ),
                         ),
                       ),
-                      Image.asset('assets/images/Login.png'),
-                    ],
-                  ),
+                    ),
+                    Container(
+                      width: 179,
+                      height: 79,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(40),
+                        gradient: LinearGradient(
+                          begin: AlignmentDirectional.topCenter,
+                          end: AlignmentDirectional.bottomCenter,
+                          colors: [
+                            Color(0xffC2B8FF),
+                            Color(0xff8A78F0),
+                          ],
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            'Sign up',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Image.asset('assets/images/Login.png',
+                              fit: BoxFit.cover, width: 24),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
