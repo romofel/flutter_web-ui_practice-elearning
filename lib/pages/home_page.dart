@@ -50,6 +50,30 @@ class HomePage extends StatelessWidget {
                                 width: 18,
                               ),
                             ),
+                            suffixIcon: Container(
+                              width: 160,
+                              height: 80,
+                              alignment: AlignmentDirectional.center,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(40),
+                                gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: [
+                                    Color(0xffFFC1CD),
+                                    Color(0xffFF8499),
+                                  ],
+                                ),
+                              ),
+                              child: Text(
+                                'Search Now',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ),
                             hintText: 'Enter your course name',
                             hintStyle: const TextStyle(
                               color: Color(0xffD9DCE2),
