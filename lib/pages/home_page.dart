@@ -10,341 +10,339 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: [
           buildNavBar(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 150),
-            child: Row(
+          _buildLandingSection(),
+        ],
+      ),
+    );
+  }
+
+  Padding _buildLandingSection() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 150),
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Education is the best way to reform people.',
-                        style: TextStyle(
-                          color: Color(0xff3A334F),
-                          fontSize: 68,
-                          fontWeight: FontWeight.w600,
-                          height: 1.1,
-                        ),
-                      ),
-                      const SizedBox(height: 36),
-                      const Text(
-                        'In-depth and practical lessons in over 100 subjects are available through online certified courses.',
-                        style: TextStyle(
-                          color: Color(0xff504A65),
-                          fontSize: 18,
-                          fontWeight: FontWeight.w300,
-                          height: 1.3,
-                        ),
-                      ),
-                      const SizedBox(height: 36),
-                      Container(
-                        height: 80,
-                        width: 461,
-                        decoration: BoxDecoration(
-                          boxShadow: <BoxShadow>[
-                            BoxShadow(
-                              color: const Color(0xff43435A).withOpacity(.11),
-                              offset: const Offset(10, 50),
-                              blurRadius: 80,
-                            ),
-                          ],
-                        ),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            prefixIcon: SizedBox(
-                              height: 80,
-                              width: 64,
-                              child: UnconstrainedBox(
-                                child: Image.asset(
-                                  'assets/images/search_icon.png',
-                                  fit: BoxFit.cover,
-                                  width: 24,
-                                ),
-                              ),
-                            ),
-                            suffixIcon: Container(
-                              width: 160,
-                              height: 80,
-                              alignment: AlignmentDirectional.center,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(40),
-                                gradient: const LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    Color(0xffFFC1CD),
-                                    Color(0xffFF8499),
-                                  ],
-                                ),
-                                boxShadow: <BoxShadow>[
-                                  BoxShadow(
-                                    color:
-                                        const Color(0xffFF8499).withOpacity(.8),
-                                    offset: const Offset(0, 4),
-                                    blurRadius: 12,
-                                  ),
-                                ],
-                              ),
-                              child: const Text(
-                                'Search Now',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                            ),
-                            hintText: 'Enter your course name',
-                            hintStyle: const TextStyle(
-                              color: Color(0xffD9DCE2),
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                            ),
-                            filled: true,
-                            fillColor: const Color(0xffFFFFFF),
-                            hoverColor: const Color(0xffFFFFFF),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(40),
-                              borderSide: const BorderSide(
-                                color: Color(0xffF0F4F5),
-                              ),
-                            ),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(40),
-                              borderSide: const BorderSide(
-                                color: Color(0xffF0F4F5),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 61),
-                      Row(
-                        children: [
-                          _buildLandingDetail(
-                            image: 'assets/images/global_icon.png',
-                            title: 'Globally Recognised',
-                            gradient: const LinearGradient(
-                              begin: AlignmentDirectional.topCenter,
-                              end: AlignmentDirectional.bottomCenter,
-                              colors: [
-                                Color(0x1aFFC1CD),
-                                Color(0x1aFF8499),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(width: 36),
-                          _buildLandingDetail(
-                            image: 'assets/images/commitment_icon.png',
-                            title: 'No Commitment',
-                            gradient: const LinearGradient(
-                              begin: AlignmentDirectional.topCenter,
-                              end: AlignmentDirectional.bottomCenter,
-                              colors: [
-                                Color(0x1aC2B8FF),
-                                Color(0x1a8A78F0),
-                              ],
-                            ),
-                          ),
-                        ],
+                const Text(
+                  'Education is the best way to reform people.',
+                  style: TextStyle(
+                    color: Color(0xff3A334F),
+                    fontSize: 68,
+                    fontWeight: FontWeight.w600,
+                    height: 1.1,
+                  ),
+                ),
+                const SizedBox(height: 36),
+                const Text(
+                  'In-depth and practical lessons in over 100 subjects are available through online certified courses.',
+                  style: TextStyle(
+                    color: Color(0xff504A65),
+                    fontSize: 18,
+                    fontWeight: FontWeight.w300,
+                    height: 1.3,
+                  ),
+                ),
+                const SizedBox(height: 36),
+                Container(
+                  height: 80,
+                  width: 461,
+                  decoration: BoxDecoration(
+                    boxShadow: <BoxShadow>[
+                      BoxShadow(
+                        color: const Color(0xff43435A).withOpacity(.11),
+                        offset: const Offset(10, 50),
+                        blurRadius: 80,
                       ),
                     ],
                   ),
-                ),
-                const SizedBox(width: 30),
-                Expanded(
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        bottom: 0,
-                        left: 0,
-                        child: SizedBox(
-                          width: 161,
-                          height: 178,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      prefixIcon: SizedBox(
+                        height: 80,
+                        width: 64,
+                        child: UnconstrainedBox(
                           child: Image.asset(
-                            'assets/images/dot_grid.png',
+                            'assets/images/search_icon.png',
                             fit: BoxFit.cover,
+                            width: 24,
                           ),
                         ),
                       ),
-                      Positioned(
-                        bottom: 0,
-                        child: Container(
-                          width: 458,
-                          height: 458,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            // color: Color(0xffFFFAFA),
-                            color: Color(0xffFFF3F4),
+                      suffixIcon: Container(
+                        width: 160,
+                        height: 80,
+                        alignment: AlignmentDirectional.center,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(40),
+                          gradient: const LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              Color(0xffFFC1CD),
+                              Color(0xffFF8499),
+                            ],
                           ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 600,
-                        child: Image.asset(
-                          'assets/images/landing_hero.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Positioned(
-                        bottom: 0,
-                        right: 0,
-                        child: Transform.translate(
-                          offset: Offset(48, 48),
-                          child: Container(
-                            width: 88,
-                            height: 88,
-                            padding: const EdgeInsets.all(20),
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              gradient: LinearGradient(
-                                begin: AlignmentDirectional.topCenter,
-                                end: AlignmentDirectional.bottomCenter,
-                                colors: [
-                                  Color(0x1aFFC1CD),
-                                  Color(0x1aFF8499),
-                                ],
-                              ),
+                          boxShadow: <BoxShadow>[
+                            BoxShadow(
+                              color: const Color(0xffFF8499).withOpacity(.8),
+                              offset: const Offset(0, 4),
+                              blurRadius: 12,
                             ),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.white,
-                              ),
-                            ),
+                          ],
+                        ),
+                        child: const Text(
+                          'Search Now',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
                       ),
-                      Positioned(
-                        bottom: 0,
-                        right: 0,
-                        child: Transform.translate(
-                          offset: const Offset(0, 24),
-                          child: SizedBox(
-                            // height: 250,
-                            child: Container(
-                              height: 182,
-                              width: 298,
-                              decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(27),
-                                  topRight: Radius.circular(27),
-                                  bottomLeft: Radius.circular(27),
-                                  bottomRight: Radius.zero,
+                      hintText: 'Enter your course name',
+                      hintStyle: const TextStyle(
+                        color: Color(0xffD9DCE2),
+                        fontSize: 18,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      filled: true,
+                      fillColor: const Color(0xffFFFFFF),
+                      hoverColor: const Color(0xffFFFFFF),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(40),
+                        borderSide: const BorderSide(
+                          color: Color(0xffF0F4F5),
+                        ),
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(40),
+                        borderSide: const BorderSide(
+                          color: Color(0xffF0F4F5),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 61),
+                Row(
+                  children: [
+                    _buildLandingDetail(
+                      image: 'assets/images/global_icon.png',
+                      title: 'Globally Recognised',
+                      gradient: const LinearGradient(
+                        begin: AlignmentDirectional.topCenter,
+                        end: AlignmentDirectional.bottomCenter,
+                        colors: [
+                          Color(0x1aFFC1CD),
+                          Color(0x1aFF8499),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 36),
+                    _buildLandingDetail(
+                      image: 'assets/images/commitment_icon.png',
+                      title: 'No Commitment',
+                      gradient: const LinearGradient(
+                        begin: AlignmentDirectional.topCenter,
+                        end: AlignmentDirectional.bottomCenter,
+                        colors: [
+                          Color(0x1aC2B8FF),
+                          Color(0x1a8A78F0),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 30),
+          Expanded(
+            child: Stack(
+              children: [
+                Positioned(
+                  bottom: 0,
+                  left: 0,
+                  child: SizedBox(
+                    width: 161,
+                    height: 178,
+                    child: Image.asset(
+                      'assets/images/dot_grid.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  bottom: 0,
+                  child: Container(
+                    width: 458,
+                    height: 458,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      // color: Color(0xffFFFAFA),
+                      color: Color(0xffFFF3F4),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 600,
+                  child: Image.asset(
+                    'assets/images/landing_hero.png',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Positioned(
+                  bottom: 0,
+                  right: 0,
+                  child: Transform.translate(
+                    offset: Offset(48, 48),
+                    child: Container(
+                      width: 88,
+                      height: 88,
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        gradient: LinearGradient(
+                          begin: AlignmentDirectional.topCenter,
+                          end: AlignmentDirectional.bottomCenter,
+                          colors: [
+                            Color(0x1aFFC1CD),
+                            Color(0x1aFF8499),
+                          ],
+                        ),
+                      ),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  bottom: 0,
+                  right: 0,
+                  child: Transform.translate(
+                    offset: const Offset(0, 24),
+                    child: SizedBox(
+                      // height: 250,
+                      child: Container(
+                        height: 182,
+                        width: 298,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(27),
+                            topRight: Radius.circular(27),
+                            bottomLeft: Radius.circular(27),
+                            bottomRight: Radius.zero,
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            Transform.translate(
+                              offset: const Offset(0, -39),
+                              child: Container(
+                                width: 79,
+                                height: 79,
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      Color(0xffFFC1CD),
+                                      Color(0xffFF8499),
+                                    ],
+                                  ),
+                                  boxShadow: <BoxShadow>[
+                                    BoxShadow(
+                                      color: Color(0x73FF8499),
+                                      offset: Offset(0, 8),
+                                      blurRadius: 18.0,
+                                    ),
+                                  ],
+                                ),
+                                child: Center(
+                                  child: Image.asset(
+                                    'assets/images/3_person_icon.png',
+                                    fit: BoxFit.cover,
+                                    width: 24,
+                                  ),
                                 ),
                               ),
+                            ),
+                            Transform.translate(
+                              offset: const Offset(0, -30),
                               child: Column(
                                 children: [
-                                  Transform.translate(
-                                    offset: const Offset(0, -39),
-                                    child: Container(
-                                      width: 79,
-                                      height: 79,
-                                      decoration: const BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            Color(0xffFFC1CD),
-                                            Color(0xffFF8499),
-                                          ],
-                                        ),
-                                        boxShadow: <BoxShadow>[
-                                          BoxShadow(
-                                            color: Color(0x73FF8499),
-                                            offset: Offset(0, 8),
-                                            blurRadius: 18.0,
-                                          ),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: Image.asset(
-                                          'assets/images/3_person_icon.png',
-                                          fit: BoxFit.cover,
-                                          width: 24,
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const Text(
+                                        'Our Teachers',
+                                        style: TextStyle(
+                                          color: Color(0xff504A65),
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.w500,
                                         ),
                                       ),
-                                    ),
+                                      const SizedBox(width: 6),
+                                      Image.asset(
+                                        'assets/images/heart_icon.png',
+                                        fit: BoxFit.cover,
+                                        width: 24,
+                                      ),
+                                    ],
                                   ),
-                                  Transform.translate(
-                                    offset: const Offset(0, -30),
-                                    child: Column(
+                                  const SizedBox(height: 12),
+                                  SizedBox(
+                                    width: 219,
+                                    height: 63,
+                                    child: Stack(
                                       children: [
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            const Text(
-                                              'Our Teachers',
+                                        Align(
+                                          alignment: Alignment.centerRight,
+                                          child: Container(
+                                            width: 63,
+                                            height: 63,
+                                            alignment: Alignment.center,
+                                            decoration: const BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Color(0xffF7F6FF),
+                                            ),
+                                            child: const Text(
+                                              '5+',
                                               style: TextStyle(
                                                 color: Color(0xff504A65),
-                                                fontSize: 22,
-                                                fontWeight: FontWeight.w500,
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w400,
                                               ),
                                             ),
-                                            const SizedBox(width: 6),
-                                            Image.asset(
-                                              'assets/images/heart_icon.png',
-                                              fit: BoxFit.cover,
-                                              width: 24,
-                                            ),
-                                          ],
+                                          ),
                                         ),
-                                        const SizedBox(height: 12),
-                                        SizedBox(
-                                          width: 219,
-                                          height: 63,
-                                          child: Stack(
-                                            children: [
-                                              Align(
-                                                alignment:
-                                                    Alignment.centerRight,
-                                                child: Container(
-                                                  width: 63,
-                                                  height: 63,
-                                                  alignment: Alignment.center,
-                                                  decoration:
-                                                      const BoxDecoration(
-                                                    shape: BoxShape.circle,
-                                                    color: Color(0xffF7F6FF),
-                                                  ),
-                                                  child: const Text(
-                                                    '5+',
-                                                    style: TextStyle(
-                                                      color: Color(0xff504A65),
-                                                      fontSize: 20,
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                              Align(
-                                                alignment: Alignment.centerLeft,
-                                                child: SizedBox(
-                                                  width: 172,
-                                                  child: Stack(
-                                                    children: [
-                                                      Image.asset(
-                                                          'assets/images/avatar_1.png'),
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerRight,
-                                                          child: Image.asset(
-                                                              'assets/images/avatar_3.png')),
-                                                      Align(
-                                                          alignment:
-                                                              Alignment.center,
-                                                          child: Image.asset(
-                                                              'assets/images/avatar_2.png')),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: SizedBox(
+                                            width: 172,
+                                            child: Stack(
+                                              children: [
+                                                Image.asset(
+                                                    'assets/images/avatar_1.png'),
+                                                Align(
+                                                    alignment:
+                                                        Alignment.centerRight,
+                                                    child: Image.asset(
+                                                        'assets/images/avatar_3.png')),
+                                                Align(
+                                                    alignment: Alignment.center,
+                                                    child: Image.asset(
+                                                        'assets/images/avatar_2.png')),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -353,60 +351,60 @@ class HomePage extends StatelessWidget {
                                 ],
                               ),
                             ),
-                          ),
+                          ],
                         ),
                       ),
-                      Align(
-                        alignment: Alignment.topRight,
-                        child: SizedBox(
-                          width: 270,
-                          height: 209,
-                          child: Image.asset(
-                            'assets/images/like-notification-icon-smartphone-social-media-notification-icon-with-heart-symbol-3d-rendering 1.png',
-                            fit: BoxFit.cover,
-                          ),
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: SizedBox(
+                    width: 270,
+                    height: 209,
+                    child: Image.asset(
+                      'assets/images/like-notification-icon-smartphone-social-media-notification-icon-with-heart-symbol-3d-rendering 1.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Transform.translate(
+                    offset: const Offset(80, 0),
+                    child: Container(
+                      width: 94,
+                      height: 94,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            Color(0x26C2B8FF),
+                            Color(0x268A78F0),
+                          ],
                         ),
                       ),
-                      Align(
-                        alignment: Alignment.topRight,
-                        child: Transform.translate(
-                          offset: const Offset(80, 0),
-                          child: Container(
-                            width: 94,
-                            height: 94,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  Color(0x26C2B8FF),
-                                  Color(0x268A78F0),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
+                    ),
+                  ),
+                ),
+                Transform.translate(
+                  offset: const Offset(-48, 120),
+                  child: Container(
+                    width: 55,
+                    height: 55,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color(0x26C2B8FF),
+                          Color(0x268A78F0),
+                        ],
                       ),
-                      Transform.translate(
-                        offset: const Offset(-48, 120),
-                        child: Container(
-                          width: 55,
-                          height: 55,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            gradient: LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                                Color(0x26C2B8FF),
-                                Color(0x268A78F0),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
               ],
