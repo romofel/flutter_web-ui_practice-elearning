@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
                           boxShadow: <BoxShadow>[
                             BoxShadow(
                               color: const Color(0xff43435A).withOpacity(.11),
-                              offset: Offset(10, 50),
+                              offset: const Offset(10, 50),
                               blurRadius: 80,
                             ),
                           ],
@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
                               alignment: AlignmentDirectional.center,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(40),
-                                gradient: LinearGradient(
+                                gradient: const LinearGradient(
                                   begin: Alignment.topCenter,
                                   end: Alignment.bottomCenter,
                                   colors: [
@@ -79,13 +79,14 @@ class HomePage extends StatelessWidget {
                                 ),
                                 boxShadow: <BoxShadow>[
                                   BoxShadow(
-                                    color: Color(0xffFF8499).withOpacity(.8),
-                                    offset: Offset(0, 4),
+                                    color:
+                                        const Color(0xffFF8499).withOpacity(.8),
+                                    offset: const Offset(0, 4),
                                     blurRadius: 12,
                                   ),
                                 ],
                               ),
-                              child: Text(
+                              child: const Text(
                                 'Search Now',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -105,18 +106,25 @@ class HomePage extends StatelessWidget {
                             hoverColor: const Color(0xffFFFFFF),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(40),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Color(0xffF0F4F5),
                               ),
                             ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(40),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Color(0xffF0F4F5),
                               ),
                             ),
                           ),
                         ),
+                      ),
+                      const SizedBox(height: 61),
+                      Row(
+                        children: [
+                          Container(),
+                          const Text('Globally Recognised'),
+                        ],
                       ),
                     ],
                   ),
@@ -191,7 +199,7 @@ class HomePage extends StatelessWidget {
             height: 79,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(40),
-              gradient: LinearGradient(
+              gradient: const LinearGradient(
                 begin: AlignmentDirectional.topCenter,
                 end: AlignmentDirectional.bottomCenter,
                 colors: [
@@ -199,7 +207,7 @@ class HomePage extends StatelessWidget {
                   Color(0xff8A78F0),
                 ],
               ),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Color(0xffC2B8FF),
                   offset: Offset(0, 5),
@@ -218,7 +226,7 @@ class HomePage extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
                 Image.asset('assets/images/Login.png',
                     fit: BoxFit.cover, width: 24),
               ],
