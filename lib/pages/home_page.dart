@@ -134,6 +134,7 @@ class HomePage extends StatelessWidget {
                               ],
                             ),
                           ),
+                          const SizedBox(width: 36),
                           _buildLandingDetail(
                             image: 'assets/images/commitment_icon.png',
                             title: 'No Commitment',
@@ -185,7 +186,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(width: 14),
+        const SizedBox(width: 8),
         Text(
           title,
           style: const TextStyle(
