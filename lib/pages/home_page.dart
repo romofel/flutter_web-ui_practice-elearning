@@ -23,6 +23,19 @@ class HomePage extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
+                Text('Trusted by\n600+ Companies'),
+                Image.asset(
+                  'assets/images/slack.png',
+                  fit: BoxFit.cover,
+                ),
+                Image.asset(
+                  'assets/images/ripple.png',
+                  fit: BoxFit.cover,
+                ),
+                Image.asset(
+                  'assets/images/hubspot.png',
+                  fit: BoxFit.cover,
+                ),
               ],
             ),
           ),
