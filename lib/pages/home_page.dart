@@ -191,32 +191,35 @@ class HomePage extends StatelessWidget {
                           ),
                           child: Column(
                             children: [
-                              Container(
-                                width: 79,
-                                height: 79,
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  gradient: LinearGradient(
-                                    begin: Alignment.topCenter,
-                                    end: Alignment.bottomCenter,
-                                    colors: [
-                                      Color(0xffFFC1CD),
-                                      Color(0xffFF8499),
+                              Transform.translate(
+                                offset: const Offset(0, -39),
+                                child: Container(
+                                  width: 79,
+                                  height: 79,
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [
+                                        Color(0xffFFC1CD),
+                                        Color(0xffFF8499),
+                                      ],
+                                    ),
+                                    boxShadow: <BoxShadow>[
+                                      BoxShadow(
+                                        color: Color(0x73FF8499),
+                                        offset: Offset(0, 8),
+                                        blurRadius: 18.0,
+                                      ),
                                     ],
                                   ),
-                                  boxShadow: <BoxShadow>[
-                                    BoxShadow(
-                                      color: Color(0x73FF8499),
-                                      offset: Offset(0, 8),
-                                      blurRadius: 18.0,
+                                  child: Center(
+                                    child: Image.asset(
+                                      'assets/images/3_person_icon.png',
+                                      fit: BoxFit.cover,
+                                      width: 24,
                                     ),
-                                  ],
-                                ),
-                                child: Center(
-                                  child: Image.asset(
-                                    'assets/images/3_person_icon.png',
-                                    fit: BoxFit.cover,
-                                    width: 24,
                                   ),
                                 ),
                               ),
