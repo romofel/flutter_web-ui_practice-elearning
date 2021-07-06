@@ -41,8 +41,22 @@ class HomePage extends StatelessWidget {
                           ],
                         )),
                 ),
-                const Text('Categories'),
-                const Text('Course Types'),
+                const Text(
+                  'Categories',
+                  style: TextStyle(
+                    color: Color(0xff3A334F),
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                const Text(
+                  'Course Types',
+                  style: TextStyle(
+                    color: Color(0xff3A334F),
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
                 Container(
                   child: Row(
                     children: const [
