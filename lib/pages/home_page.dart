@@ -212,6 +212,13 @@ class HomePage extends StatelessWidget {
                                     ),
                                   ],
                                 ),
+                                child: Center(
+                                  child: Image.asset(
+                                    'assets/images/3_person_icon.png',
+                                    fit: BoxFit.cover,
+                                    width: 24,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
