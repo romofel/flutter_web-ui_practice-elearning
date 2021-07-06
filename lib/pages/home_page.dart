@@ -266,9 +266,18 @@ class HomePage extends StatelessWidget {
                                     Container(
                                       width: 63,
                                       height: 63,
-                                      decoration: BoxDecoration(
+                                      alignment: Alignment.center,
+                                      decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: Color(0xffF7F6FF),
+                                      ),
+                                      child: const Text(
+                                        '5+',
+                                        style: TextStyle(
+                                          color: Color(0xff504A65),
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w400,
+                                        ),
                                       ),
                                     ),
                                   ],
