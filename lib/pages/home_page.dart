@@ -220,6 +220,25 @@ class HomePage extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  const Text(
+                                    'Our Teachers',
+                                    style: TextStyle(
+                                      color: Color(0xff504A65),
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 6),
+                                  Image.asset(
+                                    'assets/images/heart_icon.png',
+                                    fit: BoxFit.cover,
+                                    width: 24,
+                                  ),
+                                ],
+                              ),
                             ],
                           ),
                         ),
