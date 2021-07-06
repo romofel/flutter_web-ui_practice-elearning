@@ -326,6 +326,27 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: Transform.translate(
+                          offset: const Offset(80, 0),
+                          child: Container(
+                            width: 94,
+                            height: 94,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color(0x26C2B8FF),
+                                  Color(0x268A78F0),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
