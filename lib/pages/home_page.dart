@@ -144,12 +144,13 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                           ),
+                          const SizedBox(width: 14),
                           const Text(
                             'Globally Recognised',
                             style: TextStyle(
                               color: Color(0xff504A65),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                         ],
