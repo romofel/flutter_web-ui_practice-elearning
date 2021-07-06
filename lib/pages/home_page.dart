@@ -38,9 +38,18 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 36),
-                      SizedBox(
+                      Container(
                         height: 80,
                         width: 461,
+                        decoration: BoxDecoration(
+                          boxShadow: <BoxShadow>[
+                            BoxShadow(
+                              color: const Color(0xff43435A).withOpacity(.11),
+                              offset: Offset(10, 50),
+                              blurRadius: 80,
+                            ),
+                          ],
+                        ),
                         child: TextField(
                           decoration: InputDecoration(
                             prefixIcon: SizedBox(
@@ -68,6 +77,13 @@ class HomePage extends StatelessWidget {
                                     Color(0xffFF8499),
                                   ],
                                 ),
+                                boxShadow: <BoxShadow>[
+                                  BoxShadow(
+                                    color: Color(0xffFF8499).withOpacity(.8),
+                                    offset: Offset(0, 4),
+                                    blurRadius: 12,
+                                  ),
+                                ],
                               ),
                               child: Text(
                                 'Search Now',
