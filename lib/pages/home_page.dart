@@ -16,6 +16,7 @@ class HomePage extends StatelessWidget {
               children: [
                 Expanded(
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
                         'Education is the best way to reform people.',
@@ -36,12 +37,21 @@ class HomePage extends StatelessWidget {
                           height: 1.3,
                         ),
                       ),
+                      const SizedBox(height: 36),
                       SizedBox(
                         height: 80,
+                        width: 461,
                         child: TextField(
                           decoration: InputDecoration(
+                            hintText: 'Enter your course name',
+                            hintStyle: const TextStyle(
+                              color: Color(0xffD9DCE2),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
+                            ),
                             filled: true,
                             fillColor: const Color(0xffFFFFFF),
+                            hoverColor: const Color(0xffFFFFFF),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(40),
                               borderSide: BorderSide(
