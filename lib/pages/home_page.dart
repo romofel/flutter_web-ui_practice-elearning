@@ -122,37 +122,7 @@ class HomePage extends StatelessWidget {
                       const SizedBox(height: 61),
                       Row(
                         children: [
-                          Container(
-                            width: 53,
-                            height: 53,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              gradient: LinearGradient(
-                                begin: AlignmentDirectional.topCenter,
-                                end: AlignmentDirectional.bottomCenter,
-                                colors: [
-                                  Color(0x1aFFC1CD),
-                                  Color(0x1aFF8499),
-                                ],
-                              ),
-                            ),
-                            child: Center(
-                              child: Image.asset(
-                                'assets/images/global_icon.png',
-                                fit: BoxFit.cover,
-                                width: 32,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: 14),
-                          const Text(
-                            'Globally Recognised',
-                            style: TextStyle(
-                              color: Color(0xff504A65),
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
+                          _buildLandingDetail(),
                         ],
                       ),
                     ],
@@ -167,6 +137,44 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildLandingDetail() {
+    return Row(
+      children: [
+        Container(
+          width: 53,
+          height: 53,
+          decoration: const BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: LinearGradient(
+              begin: AlignmentDirectional.topCenter,
+              end: AlignmentDirectional.bottomCenter,
+              colors: [
+                Color(0x1aFFC1CD),
+                Color(0x1aFF8499),
+              ],
+            ),
+          ),
+          child: Center(
+            child: Image.asset(
+              'assets/images/global_icon.png',
+              fit: BoxFit.cover,
+              width: 32,
+            ),
+          ),
+        ),
+        const SizedBox(width: 14),
+        const Text(
+          'Globally Recognised',
+          style: TextStyle(
+            color: Color(0xff504A65),
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ],
     );
   }
 
