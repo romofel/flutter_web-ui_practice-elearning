@@ -43,6 +43,13 @@ class HomePage extends StatelessWidget {
                         width: 461,
                         child: TextField(
                           decoration: InputDecoration(
+                            prefixIcon: UnconstrainedBox(
+                              child: Image.asset(
+                                'assets/images/search_icon.png',
+                                fit: BoxFit.cover,
+                                width: 18,
+                              ),
+                            ),
                             hintText: 'Enter your course name',
                             hintStyle: const TextStyle(
                               color: Color(0xffD9DCE2),
