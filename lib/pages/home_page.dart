@@ -43,11 +43,15 @@ class HomePage extends StatelessWidget {
                         width: 461,
                         child: TextField(
                           decoration: InputDecoration(
-                            prefixIcon: UnconstrainedBox(
-                              child: Image.asset(
-                                'assets/images/search_icon.png',
-                                fit: BoxFit.cover,
-                                width: 18,
+                            prefixIcon: SizedBox(
+                              height: 80,
+                              width: 64,
+                              child: UnconstrainedBox(
+                                child: Image.asset(
+                                  'assets/images/search_icon.png',
+                                  fit: BoxFit.cover,
+                                  width: 24,
+                                ),
                               ),
                             ),
                             suffixIcon: Container(
