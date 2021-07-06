@@ -175,123 +175,137 @@ class HomePage extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      SizedBox(
-                        height: 250,
-                        child: Container(
-                          height: 182,
-                          width: 298,
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(27),
-                              topRight: Radius.circular(27),
-                              bottomLeft: Radius.circular(27),
-                              bottomRight: Radius.zero,
+                      Positioned(
+                        bottom: 0,
+                        right: 0,
+                        child: SizedBox(
+                          // height: 250,
+                          child: Container(
+                            height: 182,
+                            width: 298,
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(27),
+                                topRight: Radius.circular(27),
+                                bottomLeft: Radius.circular(27),
+                                bottomRight: Radius.zero,
+                              ),
                             ),
-                          ),
-                          child: Column(
-                            children: [
-                              Transform.translate(
-                                offset: const Offset(0, -39),
-                                child: Container(
-                                  width: 79,
-                                  height: 79,
-                                  decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topCenter,
-                                      end: Alignment.bottomCenter,
-                                      colors: [
-                                        Color(0xffFFC1CD),
-                                        Color(0xffFF8499),
+                            child: Column(
+                              children: [
+                                Transform.translate(
+                                  offset: const Offset(0, -39),
+                                  child: Container(
+                                    width: 79,
+                                    height: 79,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.topCenter,
+                                        end: Alignment.bottomCenter,
+                                        colors: [
+                                          Color(0xffFFC1CD),
+                                          Color(0xffFF8499),
+                                        ],
+                                      ),
+                                      boxShadow: <BoxShadow>[
+                                        BoxShadow(
+                                          color: Color(0x73FF8499),
+                                          offset: Offset(0, 8),
+                                          blurRadius: 18.0,
+                                        ),
                                       ],
                                     ),
-                                    boxShadow: <BoxShadow>[
-                                      BoxShadow(
-                                        color: Color(0x73FF8499),
-                                        offset: Offset(0, 8),
-                                        blurRadius: 18.0,
+                                    child: Center(
+                                      child: Image.asset(
+                                        'assets/images/3_person_icon.png',
+                                        fit: BoxFit.cover,
+                                        width: 24,
                                       ),
-                                    ],
-                                  ),
-                                  child: Center(
-                                    child: Image.asset(
-                                      'assets/images/3_person_icon.png',
-                                      fit: BoxFit.cover,
-                                      width: 24,
                                     ),
                                   ),
                                 ),
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const Text(
-                                    'Our Teachers',
-                                    style: TextStyle(
-                                      color: Color(0xff504A65),
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                  const SizedBox(width: 6),
-                                  Image.asset(
-                                    'assets/images/heart_icon.png',
-                                    fit: BoxFit.cover,
-                                    width: 24,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                width: 219,
-                                height: 63,
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                      alignment: Alignment.centerRight,
-                                      child: Container(
-                                        width: 63,
-                                        height: 63,
-                                        alignment: Alignment.center,
-                                        decoration: const BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Color(0xffF7F6FF),
-                                        ),
-                                        child: const Text(
-                                          '5+',
-                                          style: TextStyle(
-                                            color: Color(0xff504A65),
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.w400,
+                                Transform.translate(
+                                  offset: const Offset(0, -30),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          const Text(
+                                            'Our Teachers',
+                                            style: TextStyle(
+                                              color: Color(0xff504A65),
+                                              fontSize: 22,
+                                              fontWeight: FontWeight.w500,
+                                            ),
                                           ),
-                                        ),
+                                          const SizedBox(width: 6),
+                                          Image.asset(
+                                            'assets/images/heart_icon.png',
+                                            fit: BoxFit.cover,
+                                            width: 24,
+                                          ),
+                                        ],
                                       ),
-                                    ),
-                                    Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: SizedBox(
-                                        width: 172,
+                                      const SizedBox(height: 12),
+                                      SizedBox(
+                                        width: 219,
+                                        height: 63,
                                         child: Stack(
                                           children: [
-                                            Image.asset(
-                                                'assets/images/avatar_1.png'),
                                             Align(
-                                                alignment:
-                                                    Alignment.centerRight,
-                                                child: Image.asset(
-                                                    'assets/images/avatar_3.png')),
-                                            Align(
+                                              alignment: Alignment.centerRight,
+                                              child: Container(
+                                                width: 63,
+                                                height: 63,
                                                 alignment: Alignment.center,
-                                                child: Image.asset(
-                                                    'assets/images/avatar_2.png')),
+                                                decoration: const BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                  color: Color(0xffF7F6FF),
+                                                ),
+                                                child: const Text(
+                                                  '5+',
+                                                  style: TextStyle(
+                                                    color: Color(0xff504A65),
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.w400,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SizedBox(
+                                                width: 172,
+                                                child: Stack(
+                                                  children: [
+                                                    Image.asset(
+                                                        'assets/images/avatar_1.png'),
+                                                    Align(
+                                                        alignment: Alignment
+                                                            .centerRight,
+                                                        child: Image.asset(
+                                                            'assets/images/avatar_3.png')),
+                                                    Align(
+                                                        alignment:
+                                                            Alignment.center,
+                                                        child: Image.asset(
+                                                            'assets/images/avatar_2.png')),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
                                           ],
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
