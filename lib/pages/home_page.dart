@@ -12,67 +12,74 @@ class HomePage extends StatelessWidget {
           buildNavBar(),
           _buildLandingSection(),
           const SizedBox(height: 24),
-          SizedBox(
-            height: 191,
-            child: Row(
-              children: [
-                SizedBox(
-                  width: 136,
-                  child: Image.asset(
-                    'assets/images/thumbs_up.png',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                const Text(
-                  'Trusted by\n600+ Companies',
-                  style: TextStyle(
-                    color: Color(0xff3A334F),
-                    fontSize: 24,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                SizedBox(
-                  height: 32,
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        'assets/images/slack.png',
-                        fit: BoxFit.cover,
-                      ),
-                      Image.asset(
-                        'assets/images/ripple.png',
-                        fit: BoxFit.cover,
-                      ),
-                      Image.asset(
-                        'assets/images/hubspot.png',
-                        fit: BoxFit.cover,
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  width: 82,
-                  height: 82,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white,
-                    boxShadow: <BoxShadow>[
-                      BoxShadow(
-                        color: Color(0x40CCD0DD),
-                        offset: Offset(20, 33),
-                        blurRadius: 74,
-                      ),
-                    ],
-                  ),
-                  child: Center(
+          Padding(
+            padding: const EdgeInsets.only(right: 150),
+            child: SizedBox(
+              height: 191,
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 136,
                     child: Image.asset(
-                      'assets/images/right_arrow.png',
+                      'assets/images/thumbs_up.png',
                       fit: BoxFit.cover,
-                      width: 28,
                     ),
                   ),
-                ),
-              ],
+                  const Text(
+                    'Trusted by\n600+ Companies',
+                    style: TextStyle(
+                      color: Color(0xff3A334F),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const Spacer(),
+                  SizedBox(
+                    height: 32,
+                    width: 584,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.asset(
+                          'assets/images/slack.png',
+                          fit: BoxFit.cover,
+                        ),
+                        Image.asset(
+                          'assets/images/ripple.png',
+                          fit: BoxFit.cover,
+                        ),
+                        Image.asset(
+                          'assets/images/hubspot.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Spacer(),
+                  Container(
+                    width: 82,
+                    height: 82,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white,
+                      boxShadow: <BoxShadow>[
+                        BoxShadow(
+                          color: Color(0x40CCD0DD),
+                          offset: Offset(20, 33),
+                          blurRadius: 74,
+                        ),
+                      ],
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/right_arrow.png',
+                        fit: BoxFit.cover,
+                        width: 28,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
