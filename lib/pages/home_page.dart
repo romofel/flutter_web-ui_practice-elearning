@@ -153,8 +153,30 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 30),
-                const Expanded(
-                  child: Placeholder(),
+                Expanded(
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        bottom: 0,
+                        child: Container(
+                          width: 458,
+                          height: 458,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            // color: Color(0xffFFFAFA),
+                            color: Color(0xffFFF3F4),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 600,
+                        child: Image.asset(
+                          'assets/images/landing_hero.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
