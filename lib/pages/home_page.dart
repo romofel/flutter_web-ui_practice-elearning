@@ -59,8 +59,16 @@ class HomePage extends StatelessWidget {
                 ),
                 Container(
                   child: Row(
-                    children: const [
-                      Text('Sign up'),
+                    children: [
+                      const Text(
+                        'Sign up',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Image.asset('assets/images/Login.png'),
                     ],
                   ),
                 ),
