@@ -15,7 +15,13 @@ class HomePage extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-                  child: Column(),
+                  child: Column(
+                    children: [
+                      Text('Education is the best way to reform people.'),
+                      Text(
+                          'In-depth and practical lessons in over 100 subjects are available through online certified courses.'),
+                    ],
+                  ),
                 ),
                 Expanded(
                   child: Placeholder(),
