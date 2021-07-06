@@ -123,7 +123,14 @@ class HomePage extends StatelessWidget {
                       Row(
                         children: [
                           Container(),
-                          const Text('Globally Recognised'),
+                          const Text(
+                            'Globally Recognised',
+                            style: TextStyle(
+                              color: Color(0xff504A65),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
                         ],
                       ),
                     ],
