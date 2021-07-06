@@ -134,6 +134,18 @@ class HomePage extends StatelessWidget {
                               ],
                             ),
                           ),
+                          _buildLandingDetail(
+                            image: 'assets/images/commitment_icon.png',
+                            title: 'No Commitment',
+                            gradient: const LinearGradient(
+                              begin: AlignmentDirectional.topCenter,
+                              end: AlignmentDirectional.bottomCenter,
+                              colors: [
+                                Color(0x1aC2B8FF),
+                                Color(0x1a8A78F0),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ],
