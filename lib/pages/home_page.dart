@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,8 +12,19 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 32),
             child: Row(
               children: [
-                SvgPicture.asset('assets/images/e_logo.svg'),
-                Text('- ducation'),
+                Image.asset(
+                  'assets/images/e_logo.png',
+                  fit: BoxFit.cover,
+                  width: 32,
+                ),
+                Text(
+                  ' - ducation',
+                  style: TextStyle(
+                    color: Color(0xff3A334F),
+                    fontSize: 24,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
                 Text('Home'),
                 Text('Categories'),
                 Text('Course Types'),
