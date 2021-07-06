@@ -89,6 +89,7 @@ class HomePage extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
+                      SizedBox(width: 8),
                       Image.asset('assets/images/Login.png',
                           fit: BoxFit.cover, width: 24),
                     ],
