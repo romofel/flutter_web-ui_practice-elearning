@@ -10,6 +10,19 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: [
           buildNavBar(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 150),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Column(),
+                ),
+                Expanded(
+                  child: Placeholder(),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
