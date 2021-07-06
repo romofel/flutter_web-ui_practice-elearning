@@ -16,10 +16,25 @@ class HomePage extends StatelessWidget {
               children: [
                 Expanded(
                   child: Column(
-                    children: [
-                      Text('Education is the best way to reform people.'),
+                    children: const [
                       Text(
-                          'In-depth and practical lessons in over 100 subjects are available through online certified courses.'),
+                        'Education is the best way to reform people.',
+                        style: TextStyle(
+                          color: Color(0xff3A334F),
+                          fontSize: 75,
+                          fontWeight: FontWeight.w600,
+                          height: 1.1,
+                        ),
+                      ),
+                      Text(
+                        'In-depth and practical lessons in over 100 subjects are available through online certified courses.',
+                        style: TextStyle(
+                          color: Color(0xff504A65),
+                          fontSize: 26,
+                          fontWeight: FontWeight.w400,
+                          height: 1.3,
+                        ),
+                      ),
                     ],
                   ),
                 ),
