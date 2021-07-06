@@ -158,6 +158,18 @@ class HomePage extends StatelessWidget {
                     children: [
                       Positioned(
                         bottom: 0,
+                        left: 0,
+                        child: SizedBox(
+                          width: 161,
+                          height: 178,
+                          child: Image.asset(
+                            'assets/images/dot_grid.png',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 0,
                         child: Container(
                           width: 458,
                           height: 458,
