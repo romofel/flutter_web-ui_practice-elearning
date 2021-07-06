@@ -175,6 +175,25 @@ class HomePage extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                       ),
+                      SizedBox(
+                        height: 250,
+                        child: Container(
+                          height: 182,
+                          width: 298,
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(27),
+                              topRight: Radius.circular(27),
+                              bottomLeft: Radius.circular(27),
+                              bottomRight: Radius.zero,
+                            ),
+                          ),
+                          child: Column(
+                            children: [],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
