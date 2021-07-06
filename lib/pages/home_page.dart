@@ -11,6 +11,21 @@ class HomePage extends StatelessWidget {
         children: [
           buildNavBar(),
           _buildLandingSection(),
+          const SizedBox(height: 24),
+          SizedBox(
+            height: 191,
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 136,
+                  child: Image.asset(
+                    'assets/images/thumbs_up.png',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
