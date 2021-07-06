@@ -24,17 +24,24 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 Text('Trusted by\n600+ Companies'),
-                Image.asset(
-                  'assets/images/slack.png',
-                  fit: BoxFit.cover,
-                ),
-                Image.asset(
-                  'assets/images/ripple.png',
-                  fit: BoxFit.cover,
-                ),
-                Image.asset(
-                  'assets/images/hubspot.png',
-                  fit: BoxFit.cover,
+                SizedBox(
+                  height: 32,
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'assets/images/slack.png',
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/ripple.png',
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/hubspot.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
