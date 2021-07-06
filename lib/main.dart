@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        textTheme: GoogleFonts.montserratAlternatesTextTheme(),
+        // textTheme: GoogleFonts.montserratAlternatesTextTheme(),
+        textTheme: GoogleFonts.montserratTextTheme(),
       ),
       home: const HomePage(),
     );
