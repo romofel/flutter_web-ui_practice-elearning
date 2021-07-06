@@ -315,6 +315,17 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: SizedBox(
+                          width: 270,
+                          height: 209,
+                          child: Image.asset(
+                            'assets/images/like-notification-icon-smartphone-social-media-notification-icon-with-heart-symbol-3d-rendering 1.png',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
