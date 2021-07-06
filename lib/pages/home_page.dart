@@ -23,7 +23,14 @@ class HomePage extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-                Text('Trusted by\n600+ Companies'),
+                const Text(
+                  'Trusted by\n600+ Companies',
+                  style: TextStyle(
+                    color: Color(0xff3A334F),
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
                 SizedBox(
                   height: 32,
                   child: Row(
