@@ -245,17 +245,32 @@ class HomePage extends StatelessWidget {
                               SizedBox(
                                 width: 219,
                                 height: 63,
-                                child: Stack(
+                                child: Row(
                                   children: [
-                                    Image.asset('assets/images/avatar_1.png'),
-                                    Align(
-                                        alignment: Alignment.centerRight,
-                                        child: Image.asset(
-                                            'assets/images/avatar_3.png')),
-                                    Align(
-                                        alignment: Alignment.center,
-                                        child: Image.asset(
-                                            'assets/images/avatar_2.png')),
+                                    Expanded(
+                                      child: Stack(
+                                        children: [
+                                          Image.asset(
+                                              'assets/images/avatar_1.png'),
+                                          Align(
+                                              alignment: Alignment.centerRight,
+                                              child: Image.asset(
+                                                  'assets/images/avatar_3.png')),
+                                          Align(
+                                              alignment: Alignment.center,
+                                              child: Image.asset(
+                                                  'assets/images/avatar_2.png')),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      width: 63,
+                                      height: 63,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Color(0xffF7F6FF),
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
