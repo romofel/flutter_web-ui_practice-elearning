@@ -50,6 +50,28 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
+                Container(
+                  width: 82,
+                  height: 82,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                    boxShadow: <BoxShadow>[
+                      BoxShadow(
+                        color: Color(0x40CCD0DD),
+                        offset: Offset(20, 33),
+                        blurRadius: 74,
+                      ),
+                    ],
+                  ),
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/right_arrow.png',
+                      fit: BoxFit.cover,
+                      width: 28,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
