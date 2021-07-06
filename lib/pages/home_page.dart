@@ -190,7 +190,30 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           child: Column(
-                            children: [],
+                            children: [
+                              Container(
+                                width: 79,
+                                height: 79,
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      Color(0xffFFC1CD),
+                                      Color(0xffFF8499),
+                                    ],
+                                  ),
+                                  boxShadow: <BoxShadow>[
+                                    BoxShadow(
+                                      color: Color(0x73FF8499),
+                                      offset: Offset(0, 8),
+                                      blurRadius: 18.0,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
