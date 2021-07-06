@@ -9,21 +9,24 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          Row(
-            children: [
-              SvgPicture.asset('assets/images/e_logo.svg'),
-              Text('- ducation'),
-              Text('Home'),
-              Text('Categories'),
-              Text('Course Types'),
-              Container(
-                child: Row(
-                  children: [
-                    Text('Sign up'),
-                  ],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 32),
+            child: Row(
+              children: [
+                SvgPicture.asset('assets/images/e_logo.svg'),
+                Text('- ducation'),
+                Text('Home'),
+                Text('Categories'),
+                Text('Course Types'),
+                Container(
+                  child: Row(
+                    children: [
+                      Text('Sign up'),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
