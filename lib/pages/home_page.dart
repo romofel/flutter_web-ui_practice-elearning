@@ -245,38 +245,46 @@ class HomePage extends StatelessWidget {
                               SizedBox(
                                 width: 219,
                                 height: 63,
-                                child: Row(
+                                child: Stack(
                                   children: [
-                                    Expanded(
-                                      child: Stack(
-                                        children: [
-                                          Image.asset(
-                                              'assets/images/avatar_1.png'),
-                                          Align(
-                                              alignment: Alignment.centerRight,
-                                              child: Image.asset(
-                                                  'assets/images/avatar_3.png')),
-                                          Align(
-                                              alignment: Alignment.center,
-                                              child: Image.asset(
-                                                  'assets/images/avatar_2.png')),
-                                        ],
+                                    Align(
+                                      alignment: Alignment.centerRight,
+                                      child: Container(
+                                        width: 63,
+                                        height: 63,
+                                        alignment: Alignment.center,
+                                        decoration: const BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Color(0xffF7F6FF),
+                                        ),
+                                        child: const Text(
+                                          '5+',
+                                          style: TextStyle(
+                                            color: Color(0xff504A65),
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w400,
+                                          ),
+                                        ),
                                       ),
                                     ),
-                                    Container(
-                                      width: 63,
-                                      height: 63,
-                                      alignment: Alignment.center,
-                                      decoration: const BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: Color(0xffF7F6FF),
-                                      ),
-                                      child: const Text(
-                                        '5+',
-                                        style: TextStyle(
-                                          color: Color(0xff504A65),
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w400,
+                                    Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: SizedBox(
+                                        width: 172,
+                                        child: Stack(
+                                          children: [
+                                            Image.asset(
+                                                'assets/images/avatar_1.png'),
+                                            Align(
+                                                alignment:
+                                                    Alignment.centerRight,
+                                                child: Image.asset(
+                                                    'assets/images/avatar_3.png')),
+                                            Align(
+                                                alignment: Alignment.center,
+                                                child: Image.asset(
+                                                    'assets/images/avatar_2.png')),
+                                          ],
                                         ),
                                       ),
                                     ),
