@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
                 Expanded(
                   child: Column(
                     children: const [
-                      const Text(
+                      Text(
                         'Education is the best way to reform people.',
                         style: TextStyle(
                           color: Color(0xff3A334F),
@@ -26,21 +26,25 @@ class HomePage extends StatelessWidget {
                           height: 1.1,
                         ),
                       ),
-                      const SizedBox(height: 36),
+                      SizedBox(height: 36),
                       Text(
                         'In-depth and practical lessons in over 100 subjects are available through online certified courses.',
                         style: TextStyle(
-                          color: const Color(0xff504A65),
+                          color: Color(0xff504A65),
                           fontSize: 18,
                           fontWeight: FontWeight.w300,
                           height: 1.3,
                         ),
                       ),
+                      SizedBox(
+                        height: 80,
+                        child: TextField(),
+                      ),
                     ],
                   ),
                 ),
                 const SizedBox(width: 30),
-                Expanded(
+                const Expanded(
                   child: Placeholder(),
                 ),
               ],
