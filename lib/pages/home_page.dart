@@ -26,6 +26,7 @@ class HomePage extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
+                const Spacer(),
                 Text(
                   'Home',
                   style: TextStyle(
@@ -41,6 +42,7 @@ class HomePage extends StatelessWidget {
                           ],
                         )),
                 ),
+                const SizedBox(width: 84),
                 const Text(
                   'Categories',
                   style: TextStyle(
@@ -49,6 +51,7 @@ class HomePage extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
+                const SizedBox(width: 84),
                 const Text(
                   'Course Types',
                   style: TextStyle(
@@ -57,6 +60,7 @@ class HomePage extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
+                const Spacer(),
                 Container(
                   width: 179,
                   height: 79,
