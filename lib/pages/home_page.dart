@@ -16,8 +16,8 @@ class HomePage extends StatelessWidget {
               children: [
                 Expanded(
                   child: Column(
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         'Education is the best way to reform people.',
                         style: TextStyle(
                           color: Color(0xff3A334F),
@@ -26,8 +26,8 @@ class HomePage extends StatelessWidget {
                           height: 1.1,
                         ),
                       ),
-                      SizedBox(height: 36),
-                      Text(
+                      const SizedBox(height: 36),
+                      const Text(
                         'In-depth and practical lessons in over 100 subjects are available through online certified courses.',
                         style: TextStyle(
                           color: Color(0xff504A65),
@@ -38,7 +38,24 @@ class HomePage extends StatelessWidget {
                       ),
                       SizedBox(
                         height: 80,
-                        child: TextField(),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: const Color(0xffFFFFFF),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(40),
+                              borderSide: BorderSide(
+                                color: Color(0xffF0F4F5),
+                              ),
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(40),
+                              borderSide: BorderSide(
+                                color: Color(0xffF0F4F5),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
