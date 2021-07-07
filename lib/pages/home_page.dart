@@ -65,6 +65,7 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     const Text(
                       'Pick a Course to\nGet Started',
@@ -73,8 +74,18 @@ class HomePage extends StatelessWidget {
                         fontSize: 48,
                         fontWeight: FontWeight.w600,
                       ),
+                      textHeightBehavior:
+                          TextHeightBehavior(applyHeightToLastDescent: false),
                     ),
-                    const Text('View all courses'),
+                    const Spacer(),
+                    const Text(
+                      'View all courses',
+                      style: TextStyle(
+                        color: Color(0xff3A334F),
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                     SizedBox(
                       width: 24,
                       height: 24,
