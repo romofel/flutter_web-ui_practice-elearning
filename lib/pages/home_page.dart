@@ -116,12 +116,22 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 34, vertical: 25),
+                            padding: const EdgeInsets.only(
+                                top: 25, bottom: 25, left: 34, right: 52),
                             child: Column(
                               children: [
                                 Row(),
-                                Text('The Ultimate Blender Guide.'),
+                                SizedBox(
+                                  width: 221,
+                                  child: Text(
+                                    'The Ultimate Blender Guide.',
+                                    style: TextStyle(
+                                      color: Color(0xff3A334F),
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ),
                                 Row(),
                                 Row(),
                               ],
