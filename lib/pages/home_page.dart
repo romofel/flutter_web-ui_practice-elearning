@@ -217,6 +217,29 @@ class HomePage extends StatelessWidget {
                                         fit: BoxFit.cover,
                                       ),
                                     ),
+                                    const SizedBox(width: 8),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: const [
+                                        Text(
+                                          'James Bennet',
+                                          style: TextStyle(
+                                            color: Color(0xff3A334F),
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                        ),
+                                        Text(
+                                          '3D Animator',
+                                          style: TextStyle(
+                                            color: Color(0xff504A65),
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.w400,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ],
                                 ),
                               ],
