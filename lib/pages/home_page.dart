@@ -120,8 +120,29 @@ class HomePage extends StatelessWidget {
                                 top: 25, bottom: 25, left: 34, right: 52),
                             child: Column(
                               children: [
-                                Row(),
                                 SizedBox(
+                                  height: 24,
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 24,
+                                        child: Image.asset(
+                                          'assets/images/course_advance_icon.png',
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      const Text(
+                                        'Advance',
+                                        style: TextStyle(
+                                          color: Color(0xff3A334F),
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                const SizedBox(
                                   width: 221,
                                   child: Text(
                                     'The Ultimate Blender Guide.',
