@@ -141,6 +141,22 @@ class HomePage extends StatelessWidget {
                                           fontWeight: FontWeight.normal,
                                         ),
                                       ),
+                                      SizedBox(
+                                        width: 24,
+                                        child: Image.asset(
+                                          'assets/images/course_calendar_icon.png',
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 6),
+                                      const Text(
+                                        '6 Weeks',
+                                        style: TextStyle(
+                                          color: Color(0xff3A334F),
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
