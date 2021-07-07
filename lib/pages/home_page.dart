@@ -106,6 +106,17 @@ class HomePage extends StatelessWidget {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 230,
+                            child: Image.asset(
+                              'assets/images/course_card_img_1.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
