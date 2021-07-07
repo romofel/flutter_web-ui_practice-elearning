@@ -162,6 +162,7 @@ class HomePage extends StatelessWidget {
                                     ],
                                   ),
                                 ),
+                                const SizedBox(height: 22),
                                 const SizedBox(
                                   width: 221,
                                   child: Text(
