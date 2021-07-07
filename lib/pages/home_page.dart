@@ -16,9 +16,36 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 128),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
+                Stack(
+                  alignment: Alignment.centerLeft,
                   children: [
+                    Transform.translate(
+                      offset: const Offset(-76, 0),
+                      child: Container(
+                        width: 88,
+                        height: 88,
+                        padding: const EdgeInsets.all(20),
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          gradient: LinearGradient(
+                            begin: AlignmentDirectional.topCenter,
+                            end: AlignmentDirectional.bottomCenter,
+                            colors: [
+                              Color(0x1aFFC1CD),
+                              Color(0x1aFF8499),
+                            ],
+                          ),
+                        ),
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
                     Text(
                       'Featured Courses',
                       style: TextStyle(
@@ -301,12 +328,12 @@ class HomePage extends StatelessWidget {
                   bottom: 0,
                   right: 0,
                   child: Transform.translate(
-                    offset: Offset(48, 48),
+                    offset: const Offset(48, 48),
                     child: Container(
                       width: 88,
                       height: 88,
                       padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         gradient: LinearGradient(
                           begin: AlignmentDirectional.topCenter,
@@ -318,7 +345,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.white,
                         ),
