@@ -115,6 +115,18 @@ class HomePage extends StatelessWidget {
                               fit: BoxFit.cover,
                             ),
                           ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 34, vertical: 25),
+                            child: Column(
+                              children: [
+                                Row(),
+                                Text('The Ultimate Blender Guide.'),
+                                Row(),
+                                Row(),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ),
