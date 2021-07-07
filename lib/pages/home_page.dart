@@ -17,7 +17,25 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 128),
             child: Column(
               children: [
-                Row(),
+                Row(
+                  children: [
+                    Text(
+                      'Featured Courses',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          foreground: Paint()
+                            ..shader = ui.Gradient.linear(
+                              const Offset(5, 0),
+                              const Offset(5, 30),
+                              const <Color>[
+                                Color(0xffFFC1CD),
+                                Color(0xffFF8499),
+                              ],
+                            )),
+                    ),
+                  ],
+                ),
                 Row(),
                 Row(),
                 Row(),
