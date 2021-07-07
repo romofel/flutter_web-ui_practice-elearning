@@ -63,7 +63,19 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(),
+                const SizedBox(height: 16),
+                Row(
+                  children: const [
+                    Text(
+                      'Pick a Course to\nGet Started',
+                      style: TextStyle(
+                        color: Color(0xff3A334F),
+                        fontSize: 48,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
                 Row(),
                 Row(),
               ],
