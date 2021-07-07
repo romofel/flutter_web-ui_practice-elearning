@@ -13,6 +13,17 @@ class HomePage extends StatelessWidget {
           _buildLandingSection(),
           const SizedBox(height: 24),
           _buildCompanyAffiliatesSection(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 128),
+            child: Column(
+              children: [
+                Row(),
+                Row(),
+                Row(),
+                Row(),
+              ],
+            ),
+          )
         ],
       ),
     );
