@@ -174,7 +174,38 @@ class HomePage extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Row(),
+                                const SizedBox(height: 16),
+                                SizedBox(
+                                  width: 167,
+                                  height: 27,
+                                  child: Row(
+                                    children: [
+                                      const Text(
+                                        '\$90.00',
+                                        style: TextStyle(
+                                          color: Color(0xff3A334F),
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      Image.asset(
+                                        'assets/images/course_star_icon.png',
+                                        fit: BoxFit.cover,
+                                        width: 18,
+                                      ),
+                                      const SizedBox(width: 8),
+                                      const Text(
+                                        '5.0',
+                                        style: TextStyle(
+                                          color: Color(0xff3A334F),
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
                                 Row(),
                               ],
                             ),
