@@ -123,6 +123,7 @@ class HomePage extends StatelessWidget {
                               children: [
                                 SizedBox(
                                   height: 24,
+                                  width: 221,
                                   child: Row(
                                     children: [
                                       SizedBox(
@@ -141,6 +142,7 @@ class HomePage extends StatelessWidget {
                                           fontWeight: FontWeight.normal,
                                         ),
                                       ),
+                                      const Spacer(),
                                       SizedBox(
                                         width: 24,
                                         child: Image.asset(
