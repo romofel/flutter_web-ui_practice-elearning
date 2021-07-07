@@ -206,7 +206,19 @@ class HomePage extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                Row(),
+                                const SizedBox(height: 32),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 47,
+                                      height: 47,
+                                      child: Image.asset(
+                                        'assets/images/course_card_avatar_1.png',
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ],
                             ),
                           ),
