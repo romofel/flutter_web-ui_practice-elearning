@@ -119,6 +119,7 @@ class HomePage extends StatelessWidget {
                             padding: const EdgeInsets.only(
                                 top: 25, bottom: 25, left: 34, right: 52),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(
                                   height: 24,
@@ -131,6 +132,7 @@ class HomePage extends StatelessWidget {
                                           fit: BoxFit.cover,
                                         ),
                                       ),
+                                      const SizedBox(width: 6),
                                       const Text(
                                         'Advance',
                                         style: TextStyle(
