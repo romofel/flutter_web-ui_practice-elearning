@@ -29,6 +29,7 @@ class HomePage extends StatelessWidget {
                     Container(
                       width: 354,
                       height: 401,
+                      padding: const EdgeInsets.symmetric(horizontal: 28),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(
@@ -42,9 +43,10 @@ class HomePage extends StatelessWidget {
                             style: TextStyle(
                               color: Color(0xff3A334F),
                               fontSize: 28,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
+                          const SizedBox(height: 18),
                           const Text(
                             'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.',
                             style: TextStyle(
@@ -54,6 +56,7 @@ class HomePage extends StatelessWidget {
                               height: 1.2,
                             ),
                           ),
+                          const SizedBox(height: 24),
                           Row(
                             children: [
                               const Text(
