@@ -13,145 +13,149 @@ class HomePage extends StatelessWidget {
           _buildLandingSection(),
           const SizedBox(height: 24),
           _buildCompanyAffiliatesSection(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 128),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Stack(
-                  alignment: Alignment.centerLeft,
-                  children: [
-                    Transform.translate(
-                      offset: const Offset(-76, 0),
-                      child: Container(
-                        width: 88,
-                        height: 88,
-                        padding: const EdgeInsets.all(20),
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          gradient: LinearGradient(
-                            begin: AlignmentDirectional.topCenter,
-                            end: AlignmentDirectional.bottomCenter,
-                            colors: [
-                              Color(0x1aFFC1CD),
-                              Color(0x1aFF8499),
-                            ],
-                          ),
-                        ),
-                        child: Container(
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
+          _buildCoursesSection()
+        ],
+      ),
+    );
+  }
+
+  Padding _buildCoursesSection() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 128),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
+            alignment: Alignment.centerLeft,
+            children: [
+              Transform.translate(
+                offset: const Offset(-76, 0),
+                child: Container(
+                  width: 88,
+                  height: 88,
+                  padding: const EdgeInsets.all(20),
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    gradient: LinearGradient(
+                      begin: AlignmentDirectional.topCenter,
+                      end: AlignmentDirectional.bottomCenter,
+                      colors: [
+                        Color(0x1aFFC1CD),
+                        Color(0x1aFF8499),
+                      ],
                     ),
-                    Text(
-                      'Featured Courses',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          foreground: Paint()
-                            ..shader = ui.Gradient.linear(
-                              const Offset(5, 0),
-                              const Offset(5, 30),
-                              const <Color>[
-                                Color(0xffFFC1CD),
-                                Color(0xffFF8499),
-                              ],
-                            )),
+                  ),
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white,
                     ),
-                  ],
+                  ),
                 ),
-                const SizedBox(height: 16),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    const Text(
-                      'Pick a Course to\nGet Started',
-                      style: TextStyle(
-                        color: Color(0xff3A334F),
-                        fontSize: 48,
-                        fontWeight: FontWeight.w600,
-                      ),
-                      textHeightBehavior:
-                          TextHeightBehavior(applyHeightToLastDescent: false),
-                    ),
-                    const Spacer(),
-                    const Text(
-                      'View all courses',
-                      style: TextStyle(
-                        color: Color(0xff3A334F),
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 24,
-                      height: 24,
-                      child: Image.asset(
-                        'assets/images/right_arrow.png',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ],
+              ),
+              Text(
+                'Featured Courses',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    foreground: Paint()
+                      ..shader = ui.Gradient.linear(
+                        const Offset(5, 0),
+                        const Offset(5, 30),
+                        const <Color>[
+                          Color(0xffFFC1CD),
+                          Color(0xffFF8499),
+                        ],
+                      )),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              const Text(
+                'Pick a Course to\nGet Started',
+                style: TextStyle(
+                  color: Color(0xff3A334F),
+                  fontSize: 48,
+                  fontWeight: FontWeight.w600,
                 ),
-                const SizedBox(height: 62),
-                Wrap(
-                  direction: Axis.horizontal,
-                  spacing: 66,
-                  runSpacing: 72,
-                  children: [
-                    _buildCourseCard(
-                      cardHeroPath: 'assets/images/course_card_img_1.png',
-                      difficulty: 'Advance',
-                      weeks: 6,
-                      price: 90.00,
-                      rating: 5.0,
-                      title: 'The Ultimate Blender Guide',
-                      instructorName: 'James Bennet',
-                      instructorTitle: '3D Animator',
-                      avatarPath: 'assets/images/course_card_avatar_1.png',
-                    ),
-                    _buildCourseCard(
-                      cardHeroPath: 'assets/images/course_card_img_2.png',
-                      difficulty: 'Basic',
-                      weeks: 5,
-                      price: 85.00,
-                      rating: 4.8,
-                      title: 'The Complete IOS APP Development',
-                      instructorName: 'Marti Scoresese',
-                      instructorTitle: 'App Developer',
-                      avatarPath: 'assets/images/course_card_avatar_2.png',
-                    ),
-                    _buildCourseCard(
-                      cardHeroPath: 'assets/images/course_card_img_3.png',
-                      difficulty: 'Basic',
-                      weeks: 8,
-                      price: 80.00,
-                      rating: 4.8,
-                      title: 'The Complete Development Web Course',
-                      instructorName: 'Bradley Hunter',
-                      instructorTitle: 'Web Developer',
-                      avatarPath: 'assets/images/course_card_avatar_3.png',
-                    ),
-                    _buildCourseCard(
-                      cardHeroPath: 'assets/images/course_card_img_4.png',
-                      difficulty: 'Advance',
-                      weeks: 6,
-                      price: 65.00,
-                      rating: 4.9,
-                      title: 'SEO Training Masterclass 2021',
-                      instructorName: 'Charlie Burns',
-                      instructorTitle: 'Seo Expert',
-                      avatarPath: 'assets/images/course_card_avatar_4.png',
-                    ),
-                  ],
+                textHeightBehavior:
+                    TextHeightBehavior(applyHeightToLastDescent: false),
+              ),
+              const Spacer(),
+              const Text(
+                'View all courses',
+                style: TextStyle(
+                  color: Color(0xff3A334F),
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
                 ),
-                // Row(),
-              ],
-            ),
-          )
+              ),
+              SizedBox(
+                width: 24,
+                height: 24,
+                child: Image.asset(
+                  'assets/images/right_arrow.png',
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 62),
+          Wrap(
+            direction: Axis.horizontal,
+            spacing: 66,
+            runSpacing: 72,
+            children: [
+              _buildCourseCard(
+                cardHeroPath: 'assets/images/course_card_img_1.png',
+                difficulty: 'Advance',
+                weeks: 6,
+                price: 90.00,
+                rating: 5.0,
+                title: 'The Ultimate Blender Guide',
+                instructorName: 'James Bennet',
+                instructorTitle: '3D Animator',
+                avatarPath: 'assets/images/course_card_avatar_1.png',
+              ),
+              _buildCourseCard(
+                cardHeroPath: 'assets/images/course_card_img_2.png',
+                difficulty: 'Basic',
+                weeks: 5,
+                price: 85.00,
+                rating: 4.8,
+                title: 'The Complete IOS APP Development',
+                instructorName: 'Marti Scoresese',
+                instructorTitle: 'App Developer',
+                avatarPath: 'assets/images/course_card_avatar_2.png',
+              ),
+              _buildCourseCard(
+                cardHeroPath: 'assets/images/course_card_img_3.png',
+                difficulty: 'Basic',
+                weeks: 8,
+                price: 80.00,
+                rating: 4.8,
+                title: 'The Complete Development Web Course',
+                instructorName: 'Bradley Hunter',
+                instructorTitle: 'Web Developer',
+                avatarPath: 'assets/images/course_card_avatar_3.png',
+              ),
+              _buildCourseCard(
+                cardHeroPath: 'assets/images/course_card_img_4.png',
+                difficulty: 'Advance',
+                weeks: 6,
+                price: 65.00,
+                rating: 4.9,
+                title: 'SEO Training Masterclass 2021',
+                instructorName: 'Charlie Burns',
+                instructorTitle: 'Seo Expert',
+                avatarPath: 'assets/images/course_card_avatar_4.png',
+              ),
+            ],
+          ),
+          // Row(),
         ],
       ),
     );
