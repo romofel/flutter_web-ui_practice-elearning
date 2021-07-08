@@ -13,7 +13,31 @@ class HomePage extends StatelessWidget {
           _buildLandingSection(),
           const SizedBox(height: 24),
           _buildCompanyAffiliatesSection(),
-          _buildCoursesSection()
+          _buildCoursesSection(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
+            child: Column(
+              children: [
+                _buildSectionHeader(
+                  title: 'Walk-through',
+                  subtitle: 'How does it\nwork?',
+                  action: 'See your free courses',
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
+            child: Column(
+              children: [
+                _buildSectionHeader(
+                  title: 'Instructors',
+                  subtitle: 'Classes Taught\nby real Creators',
+                  action: 'See all instructors',
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
