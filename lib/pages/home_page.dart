@@ -49,8 +49,9 @@ class HomePage extends StatelessWidget {
                             'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.',
                             style: TextStyle(
                               color: Color(0xff504A65),
-                              fontSize: 18,
-                              fontWeight: FontWeight.normal,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w300,
+                              height: 1.2,
                             ),
                           ),
                           Row(
@@ -59,13 +60,14 @@ class HomePage extends StatelessWidget {
                                 'Learn More',
                                 style: TextStyle(
                                   color: Color(0xff3A334F),
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w500,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
                                 ),
                               ),
                               Image.asset(
                                 'assets/images/right_arrow.png',
                                 fit: BoxFit.cover,
+                                width: 20,
                               ),
                             ],
                           ),
