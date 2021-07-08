@@ -35,6 +35,22 @@ class HomePage extends StatelessWidget {
                           color: const Color(0xffF0F4F5),
                         ),
                       ),
+                      child: Column(
+                        children: [
+                          Text('Choose an appropriate course.'),
+                          Text(
+                              'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.'),
+                          Row(
+                            children: [
+                              Text('Learn More'),
+                              Image.asset(
+                                'assets/images/right_arrow.png',
+                                fit: BoxFit.cover,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
