@@ -33,6 +33,18 @@ class HomePage extends StatelessWidget {
                       title: 'App Development',
                       rating: 5.0,
                     ),
+                    _buildCreatorCard(
+                      imgPath: 'assets/images/creator_img_2.png',
+                      name: 'Marti Scorsese',
+                      title: '3D Animation',
+                      rating: 4.9,
+                    ),
+                    _buildCreatorCard(
+                      imgPath: 'assets/images/creator_img_3.png',
+                      name: 'Charlie Burns',
+                      title: 'Web Development',
+                      rating: 4.8,
+                    ),
                   ],
                 ),
               ],
