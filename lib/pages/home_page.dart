@@ -24,6 +24,87 @@ class HomePage extends StatelessWidget {
                   subtitle: 'Classes Taught\nby real Creators',
                   action: 'See all instructors',
                 ),
+                const SizedBox(height: 50),
+                Row(
+                  children: [
+                    Container(
+                      width: 354,
+                      height: 514,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 401,
+                            child: Image.asset(
+                              'assets/images/creator_img_1.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 30, vertical: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'James Bennett',
+                                  style: TextStyle(
+                                    color: Color(0xff3A334F),
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                                const SizedBox(height: 8),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 18,
+                                      height: 18,
+                                      child: Image.asset(
+                                        'assets/images/creator_paper_icon.png',
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 6),
+                                    Text(
+                                      'App Development',
+                                      style: TextStyle(
+                                        color: Color(0xff504A65),
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 16),
+                                    SizedBox(
+                                      width: 18,
+                                      height: 18,
+                                      child: Image.asset(
+                                        'assets/images/course_star_icon.png',
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 6),
+                                    Text(
+                                      '5.0',
+                                      style: TextStyle(
+                                        color: Color(0xff504A65),
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
