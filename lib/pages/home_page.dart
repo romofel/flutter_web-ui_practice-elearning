@@ -25,51 +25,7 @@ class HomePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Stack(
-            alignment: Alignment.centerLeft,
-            children: [
-              Transform.translate(
-                offset: const Offset(-76, 0),
-                child: Container(
-                  width: 88,
-                  height: 88,
-                  padding: const EdgeInsets.all(20),
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    gradient: LinearGradient(
-                      begin: AlignmentDirectional.topCenter,
-                      end: AlignmentDirectional.bottomCenter,
-                      colors: [
-                        Color(0x1aFFC1CD),
-                        Color(0x1aFF8499),
-                      ],
-                    ),
-                  ),
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-              Text(
-                'Featured Courses',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                    foreground: Paint()
-                      ..shader = ui.Gradient.linear(
-                        const Offset(5, 0),
-                        const Offset(5, 30),
-                        const <Color>[
-                          Color(0xffFFC1CD),
-                          Color(0xffFF8499),
-                        ],
-                      )),
-              ),
-            ],
-          ),
+          _buildSectionTitle('Featured Courses'),
           const SizedBox(height: 16),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
@@ -158,6 +114,60 @@ class HomePage extends StatelessWidget {
           // Row(),
         ],
       ),
+    );
+  }
+
+  Column _buildSectionHeader() {
+    return Column(
+      children: [],
+    );
+  }
+
+  Stack _buildSectionTitle(String title) {
+    return Stack(
+      alignment: Alignment.centerLeft,
+      children: [
+        Transform.translate(
+          offset: const Offset(-76, 0),
+          child: Container(
+            width: 88,
+            height: 88,
+            padding: const EdgeInsets.all(20),
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              gradient: LinearGradient(
+                begin: AlignmentDirectional.topCenter,
+                end: AlignmentDirectional.bottomCenter,
+                colors: [
+                  Color(0x1aFFC1CD),
+                  Color(0x1aFF8499),
+                ],
+              ),
+            ),
+            child: Container(
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ),
+        Text(
+          title,
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
+              foreground: Paint()
+                ..shader = ui.Gradient.linear(
+                  const Offset(5, 0),
+                  const Offset(5, 30),
+                  const <Color>[
+                    Color(0xffFFC1CD),
+                    Color(0xffFF8499),
+                  ],
+                )),
+        ),
+      ],
     );
   }
 
