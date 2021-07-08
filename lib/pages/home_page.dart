@@ -14,50 +14,7 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 24),
           _buildCompanyAffiliatesSection(),
           _buildCoursesSection(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
-            child: Column(
-              children: [
-                _buildSectionHeader(
-                  title: 'Walk-through',
-                  subtitle: 'How does it\nwork?',
-                  action: 'See your free courses',
-                ),
-                const SizedBox(height: 50),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    _buildHelpCard(
-                      index: '01',
-                      title: 'Choose an appropriate course.',
-                      content:
-                          'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.',
-                    ),
-                    _buildHelpCard(
-                      index: '02',
-                      title: 'Take classes through the internet.',
-                      content:
-                          'It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.',
-                      gradient: const LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          Color(0x26C2B8FF),
-                          Color(0x268A78F0),
-                        ],
-                      ),
-                    ),
-                    _buildHelpCard(
-                      index: '03',
-                      title: 'Obtain your certificate',
-                      content:
-                          'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
+          _buildHelpSection(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
             child: Column(
@@ -69,6 +26,53 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Padding _buildHelpSection() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
+      child: Column(
+        children: [
+          _buildSectionHeader(
+            title: 'Walk-through',
+            subtitle: 'How does it\nwork?',
+            action: 'See your free courses',
+          ),
+          const SizedBox(height: 50),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              _buildHelpCard(
+                index: '01',
+                title: 'Choose an appropriate course.',
+                content:
+                    'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.',
+              ),
+              _buildHelpCard(
+                index: '02',
+                title: 'Take classes through the internet.',
+                content:
+                    'It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.',
+                gradient: const LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Color(0x26C2B8FF),
+                    Color(0x268A78F0),
+                  ],
+                ),
+              ),
+              _buildHelpCard(
+                index: '03',
+                title: 'Obtain your certificate',
+                content:
+                    'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+              ),
+            ],
           ),
         ],
       ),
