@@ -174,6 +174,13 @@ class HomePage extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
+        boxShadow: const <BoxShadow>[
+          BoxShadow(
+            color: Colors.black12,
+            offset: Offset(0, 2),
+            blurRadius: 18.0,
+          ),
+        ],
       ),
       child: Row(
         children: [
@@ -236,10 +243,12 @@ class HomePage extends StatelessWidget {
                   width: 221,
                   child: Text(
                     title,
+                    maxLines: 2,
                     style: const TextStyle(
                       color: Color(0xff3A334F),
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: FontWeight.w600,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
                 ),
