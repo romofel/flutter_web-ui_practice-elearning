@@ -25,12 +25,33 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 50),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     _buildHelpCard(
                       index: 1,
                       title: 'Choose an appropriate course.',
                       content:
                           'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.',
+                    ),
+                    _buildHelpCard(
+                      index: 2,
+                      title: 'Take classes through the internet.',
+                      content:
+                          'It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.',
+                      gradient: const LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color(0x26C2B8FF),
+                          Color(0x268A78F0),
+                        ],
+                      ),
+                    ),
+                    _buildHelpCard(
+                      index: 3,
+                      title: 'Obtain your certificate',
+                      content:
+                          'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
                     ),
                   ],
                 ),
@@ -94,9 +115,9 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              const Text(
-                '01',
-                style: TextStyle(
+              Text(
+                '$index',
+                style: const TextStyle(
                   color: Color(0xff3A334F),
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
