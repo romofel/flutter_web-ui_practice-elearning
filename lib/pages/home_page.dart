@@ -26,90 +26,11 @@ class HomePage extends StatelessWidget {
                 const SizedBox(height: 50),
                 Row(
                   children: [
-                    Container(
-                      width: 354,
-                      height: 401,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 28, vertical: 16),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(
-                          color: const Color(0xffF0F4F5),
-                        ),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Stack(
-                            alignment: Alignment.centerLeft,
-                            children: [
-                              Transform.translate(
-                                offset: const Offset(25, 0),
-                                child: Container(
-                                  width: 60,
-                                  height: 60,
-                                  decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topCenter,
-                                      end: Alignment.bottomCenter,
-                                      colors: [
-                                        Color(0x26FFC1CD),
-                                        Color(0x26FF8499),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              const Text(
-                                '01',
-                                style: TextStyle(
-                                  color: Color(0xff3A334F),
-                                  fontSize: 40,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            'Choose an appropriate course.',
-                            style: TextStyle(
-                              color: Color(0xff3A334F),
-                              fontSize: 28,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          const SizedBox(height: 18),
-                          const Text(
-                            'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.',
-                            style: TextStyle(
-                              color: Color(0xff504A65),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w300,
-                              height: 1.4,
-                            ),
-                          ),
-                          const SizedBox(height: 24),
-                          Row(
-                            children: [
-                              const Text(
-                                'Learn More',
-                                style: TextStyle(
-                                  color: Color(0xff3A334F),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w700,
-                                ),
-                              ),
-                              Image.asset(
-                                'assets/images/right_arrow.png',
-                                fit: BoxFit.cover,
-                                width: 20,
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
+                    _buildHelpCard(
+                      index: 1,
+                      title: 'Choose an appropriate course.',
+                      content:
+                          'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.',
                     ),
                   ],
                 ),
@@ -127,6 +48,98 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container _buildHelpCard({
+    required int index,
+    required String title,
+    required String content,
+    LinearGradient gradient = const LinearGradient(
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      colors: [
+        Color(0x26FFC1CD),
+        Color(0x26FF8499),
+      ],
+    ),
+  }) {
+    return Container(
+      width: 354,
+      height: 401,
+      padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 16),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: const Color(0xffF0F4F5),
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
+            alignment: Alignment.centerLeft,
+            children: [
+              Transform.translate(
+                offset: const Offset(25, 0),
+                child: Container(
+                  width: 60,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    gradient: gradient,
+                  ),
+                ),
+              ),
+              const Text(
+                '01',
+                style: TextStyle(
+                  color: Color(0xff3A334F),
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Text(
+            title,
+            style: const TextStyle(
+              color: Color(0xff3A334F),
+              fontSize: 28,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 18),
+          Text(
+            content,
+            style: const TextStyle(
+              color: Color(0xff504A65),
+              fontSize: 16,
+              fontWeight: FontWeight.w300,
+              height: 1.4,
+            ),
+          ),
+          const SizedBox(height: 24),
+          Row(
+            children: [
+              const Text(
+                'Learn More',
+                style: TextStyle(
+                  color: Color(0xff3A334F),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              Image.asset(
+                'assets/images/right_arrow.png',
+                fit: BoxFit.cover,
+                width: 20,
+              ),
+            ],
           ),
         ],
       ),
