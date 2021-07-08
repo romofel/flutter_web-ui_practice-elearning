@@ -29,7 +29,8 @@ class HomePage extends StatelessWidget {
                     Container(
                       width: 354,
                       height: 401,
-                      padding: const EdgeInsets.symmetric(horizontal: 28),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 28, vertical: 16),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(
@@ -37,21 +38,26 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Stack(
+                            alignment: Alignment.centerLeft,
                             children: [
-                              Container(
-                                width: 60,
-                                height: 60,
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  gradient: LinearGradient(
-                                    begin: Alignment.topCenter,
-                                    end: Alignment.bottomCenter,
-                                    colors: [
-                                      Color(0x26FFC1CD),
-                                      Color(0x26FF8499),
-                                    ],
+                              Transform.translate(
+                                offset: const Offset(25, 0),
+                                child: Container(
+                                  width: 60,
+                                  height: 60,
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [
+                                        Color(0x26FFC1CD),
+                                        Color(0x26FF8499),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -65,6 +71,7 @@ class HomePage extends StatelessWidget {
                               ),
                             ],
                           ),
+                          const SizedBox(height: 10),
                           const Text(
                             'Choose an appropriate course.',
                             style: TextStyle(
