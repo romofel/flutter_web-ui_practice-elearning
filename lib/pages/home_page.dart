@@ -38,6 +38,33 @@ class HomePage extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
+                          Stack(
+                            children: [
+                              Container(
+                                width: 60,
+                                height: 60,
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      Color(0x26FFC1CD),
+                                      Color(0x26FF8499),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              const Text(
+                                '01',
+                                style: TextStyle(
+                                  color: Color(0xff3A334F),
+                                  fontSize: 40,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
                           const Text(
                             'Choose an appropriate course.',
                             style: TextStyle(
