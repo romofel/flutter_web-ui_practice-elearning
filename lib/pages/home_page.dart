@@ -15,41 +15,45 @@ class HomePage extends StatelessWidget {
           _buildCompanyAffiliatesSection(),
           _buildCoursesSection(),
           _buildHelpSection(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
-            child: Column(
-              children: [
-                _buildSectionHeader(
-                  title: 'Instructors',
-                  subtitle: 'Classes Taught\nby real Creators',
-                  action: 'See all instructors',
-                ),
-                const SizedBox(height: 50),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    _buildCreatorCard(
-                      imgPath: 'assets/images/creator_img_1.png',
-                      name: 'James Bennet',
-                      title: 'App Development',
-                      rating: 5.0,
-                    ),
-                    _buildCreatorCard(
-                      imgPath: 'assets/images/creator_img_2.png',
-                      name: 'Marti Scorsese',
-                      title: '3D Animation',
-                      rating: 4.9,
-                    ),
-                    _buildCreatorCard(
-                      imgPath: 'assets/images/creator_img_3.png',
-                      name: 'Charlie Burns',
-                      title: 'Web Development',
-                      rating: 4.8,
-                    ),
-                  ],
-                ),
-              ],
-            ),
+          _buildCreatorSection(),
+        ],
+      ),
+    );
+  }
+
+  Padding _buildCreatorSection() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
+      child: Column(
+        children: [
+          _buildSectionHeader(
+            title: 'Instructors',
+            subtitle: 'Classes Taught\nby real Creators',
+            action: 'See all instructors',
+          ),
+          const SizedBox(height: 50),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              _buildCreatorCard(
+                imgPath: 'assets/images/creator_img_1.png',
+                name: 'James Bennet',
+                title: 'App Development',
+                rating: 5.0,
+              ),
+              _buildCreatorCard(
+                imgPath: 'assets/images/creator_img_2.png',
+                name: 'Marti Scorsese',
+                title: '3D Animation',
+                rating: 4.9,
+              ),
+              _buildCreatorCard(
+                imgPath: 'assets/images/creator_img_3.png',
+                name: 'Charlie Burns',
+                title: 'Web Development',
+                rating: 4.8,
+              ),
+            ],
           ),
         ],
       ),
