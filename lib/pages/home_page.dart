@@ -26,6 +26,7 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 50),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     _buildCreatorCard(
                       imgPath: 'assets/images/creator_img_1.png',
