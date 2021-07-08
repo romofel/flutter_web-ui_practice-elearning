@@ -28,13 +28,13 @@ class HomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     _buildHelpCard(
-                      index: 1,
+                      index: '01',
                       title: 'Choose an appropriate course.',
                       content:
                           'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.',
                     ),
                     _buildHelpCard(
-                      index: 2,
+                      index: '02',
                       title: 'Take classes through the internet.',
                       content:
                           'It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.',
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     _buildHelpCard(
-                      index: 3,
+                      index: '03',
                       title: 'Obtain your certificate',
                       content:
                           'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
@@ -76,7 +76,7 @@ class HomePage extends StatelessWidget {
   }
 
   Container _buildHelpCard({
-    required int index,
+    required String index,
     required String title,
     required String content,
     LinearGradient gradient = const LinearGradient(
@@ -105,7 +105,7 @@ class HomePage extends StatelessWidget {
             alignment: Alignment.centerLeft,
             children: [
               Transform.translate(
-                offset: const Offset(25, 0),
+                offset: const Offset(16, 0),
                 child: Container(
                   width: 60,
                   height: 60,
@@ -116,7 +116,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Text(
-                '$index',
+                index,
                 style: const TextStyle(
                   color: Color(0xff3A334F),
                   fontSize: 40,
