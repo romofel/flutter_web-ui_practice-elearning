@@ -99,154 +99,16 @@ class HomePage extends StatelessWidget {
                 const SizedBox(height: 50),
                 Row(
                   children: [
-                    Container(
-                      width: 537,
-                      height: 277,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 230,
-                            child: Image.asset(
-                              'assets/images/course_card_img_1.png',
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                top: 25, bottom: 25, left: 34, right: 52),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SizedBox(
-                                  height: 24,
-                                  width: 221,
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 24,
-                                        child: Image.asset(
-                                          'assets/images/course_advance_icon.png',
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                      const SizedBox(width: 6),
-                                      const Text(
-                                        'Advance',
-                                        style: TextStyle(
-                                          color: Color(0xff3A334F),
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.normal,
-                                        ),
-                                      ),
-                                      const Spacer(),
-                                      SizedBox(
-                                        width: 24,
-                                        child: Image.asset(
-                                          'assets/images/course_calendar_icon.png',
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                      const SizedBox(width: 6),
-                                      const Text(
-                                        '6 Weeks',
-                                        style: TextStyle(
-                                          color: Color(0xff3A334F),
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.normal,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                const SizedBox(height: 22),
-                                const SizedBox(
-                                  width: 221,
-                                  child: Text(
-                                    'The Ultimate Blender Guide.',
-                                    style: TextStyle(
-                                      color: Color(0xff3A334F),
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(height: 16),
-                                SizedBox(
-                                  width: 167,
-                                  height: 27,
-                                  child: Row(
-                                    children: [
-                                      const Text(
-                                        '\$90.00',
-                                        style: TextStyle(
-                                          color: Color(0xff3A334F),
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                      const Spacer(),
-                                      Image.asset(
-                                        'assets/images/course_star_icon.png',
-                                        fit: BoxFit.cover,
-                                        width: 18,
-                                      ),
-                                      const SizedBox(width: 8),
-                                      const Text(
-                                        '5.0',
-                                        style: TextStyle(
-                                          color: Color(0xff3A334F),
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                                const SizedBox(height: 32),
-                                Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 47,
-                                      height: 47,
-                                      child: Image.asset(
-                                        'assets/images/course_card_avatar_1.png',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                    const SizedBox(width: 8),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: const [
-                                        Text(
-                                          'James Bennet',
-                                          style: TextStyle(
-                                            color: Color(0xff3A334F),
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                        Text(
-                                          '3D Animator',
-                                          style: TextStyle(
-                                            color: Color(0xff504A65),
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.w400,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
+                    _buildCourseCard(
+                      cardHeroPath: 'assets/images/course_card_img_1.png',
+                      difficulty: 'Advance',
+                      weeks: 6,
+                      price: 90.00,
+                      rating: 5.0,
+                      title: 'The Ultimate Blender Guide',
+                      instructorName: 'James Bennet',
+                      instructorTitle: '3D Animator',
+                      avatarPath: 'assets/images/course_card_avatar_1.png',
                     ),
                   ],
                 ),
@@ -254,6 +116,167 @@ class HomePage extends StatelessWidget {
               ],
             ),
           )
+        ],
+      ),
+    );
+  }
+
+  Container _buildCourseCard({
+    required String difficulty,
+    required int weeks,
+    required String title,
+    required double price,
+    required double rating,
+    required String avatarPath,
+    required String instructorName,
+    required String instructorTitle,
+    required String cardHeroPath,
+  }) {
+    return Container(
+      width: 537,
+      height: 277,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 230,
+            child: Image.asset(
+              cardHeroPath,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Padding(
+            padding:
+                const EdgeInsets.only(top: 25, bottom: 25, left: 34, right: 52),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 24,
+                  width: 221,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 24,
+                        child: Image.asset(
+                          'assets/images/course_advance_icon.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      const SizedBox(width: 6),
+                      Text(
+                        difficulty,
+                        style: const TextStyle(
+                          color: Color(0xff3A334F),
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                      const Spacer(),
+                      SizedBox(
+                        width: 24,
+                        child: Image.asset(
+                          'assets/images/course_calendar_icon.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      const SizedBox(width: 6),
+                      Text(
+                        '$weeks Weeks',
+                        style: const TextStyle(
+                          color: Color(0xff3A334F),
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 22),
+                SizedBox(
+                  width: 221,
+                  child: Text(
+                    title,
+                    style: const TextStyle(
+                      color: Color(0xff3A334F),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                SizedBox(
+                  width: 167,
+                  height: 27,
+                  child: Row(
+                    children: [
+                      Text(
+                        '\$${price.toStringAsFixed(2)}',
+                        style: const TextStyle(
+                          color: Color(0xff3A334F),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      const Spacer(),
+                      Image.asset(
+                        'assets/images/course_star_icon.png',
+                        fit: BoxFit.cover,
+                        width: 18,
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        '${rating.toStringAsFixed(1)}',
+                        style: const TextStyle(
+                          color: Color(0xff3A334F),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 32),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 47,
+                      height: 47,
+                      child: Image.asset(
+                        avatarPath,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          instructorName,
+                          style: const TextStyle(
+                            color: Color(0xff3A334F),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          instructorTitle,
+                          style: const TextStyle(
+                            color: Color(0xff504A65),
+                            fontSize: 10,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
