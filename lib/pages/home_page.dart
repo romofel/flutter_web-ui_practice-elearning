@@ -23,6 +23,21 @@ class HomePage extends StatelessWidget {
                   subtitle: 'How does it\nwork?',
                   action: 'See your free courses',
                 ),
+                const SizedBox(height: 50),
+                Row(
+                  children: [
+                    Container(
+                      width: 354,
+                      height: 401,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(
+                          color: const Color(0xffF0F4F5),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
