@@ -37,12 +37,32 @@ class HomePage extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
-                          Text('Choose an appropriate course.'),
-                          Text(
-                              'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.'),
+                          const Text(
+                            'Choose an appropriate course.',
+                            style: TextStyle(
+                              color: Color(0xff3A334F),
+                              fontSize: 28,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          const Text(
+                            'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.',
+                            style: TextStyle(
+                              color: Color(0xff504A65),
+                              fontSize: 18,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
                           Row(
                             children: [
-                              Text('Learn More'),
+                              const Text(
+                                'Learn More',
+                                style: TextStyle(
+                                  color: Color(0xff3A334F),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
                               Image.asset(
                                 'assets/images/right_arrow.png',
                                 fit: BoxFit.cover,
