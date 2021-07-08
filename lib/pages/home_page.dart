@@ -25,39 +25,10 @@ class HomePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildSectionTitle('Featured Courses'),
-          const SizedBox(height: 16),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              const Text(
-                'Pick a Course to\nGet Started',
-                style: TextStyle(
-                  color: Color(0xff3A334F),
-                  fontSize: 48,
-                  fontWeight: FontWeight.w600,
-                ),
-                textHeightBehavior:
-                    TextHeightBehavior(applyHeightToLastDescent: false),
-              ),
-              const Spacer(),
-              const Text(
-                'View all courses',
-                style: TextStyle(
-                  color: Color(0xff3A334F),
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(
-                width: 24,
-                height: 24,
-                child: Image.asset(
-                  'assets/images/right_arrow.png',
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ],
+          _buildSectionHeader(
+            title: 'Featured Courses',
+            subtitle: 'Pick a Course to\nGet Started',
+            action: 'View all courses',
           ),
           const SizedBox(height: 62),
           Wrap(
@@ -117,9 +88,48 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Column _buildSectionHeader() {
+  Column _buildSectionHeader(
+      {required String title,
+      required String subtitle,
+      required String action}) {
     return Column(
-      children: [],
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _buildSectionTitle(title),
+        const SizedBox(height: 16),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Text(
+              subtitle,
+              style: const TextStyle(
+                color: Color(0xff3A334F),
+                fontSize: 48,
+                fontWeight: FontWeight.w600,
+              ),
+              textHeightBehavior:
+                  const TextHeightBehavior(applyHeightToLastDescent: false),
+            ),
+            const Spacer(),
+            Text(
+              action,
+              style: const TextStyle(
+                color: Color(0xff3A334F),
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            SizedBox(
+              width: 24,
+              height: 24,
+              child: Image.asset(
+                'assets/images/right_arrow.png',
+                fit: BoxFit.cover,
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 
