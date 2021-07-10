@@ -50,14 +50,22 @@ class HomePage extends StatelessWidget {
                             shadowColor: const Color(0x66FF90A4),
                             iconPath: 'assets/images/google_icon.png',
                           ),
-                          // Image.asset(
-                          //   'assets/images/twitter_icon.png',
-                          //   fit: BoxFit.cover,
-                          // ),
-                          // Image.asset(
-                          //   'assets/images/instagram_icon.png',
-                          //   fit: BoxFit.cover,
-                          // ),
+                          _buildSocialIcon(
+                            colors: const [
+                              Color(0xffC2B8FF),
+                              Color(0xff8A78F0),
+                            ],
+                            shadowColor: const Color(0x669484F3),
+                            iconPath: 'assets/images/twitter_icon.png',
+                          ),
+                          _buildSocialIcon(
+                            colors: const [
+                              Color(0xffB8DDFF),
+                              Color(0xff6AB8FF),
+                            ],
+                            shadowColor: const Color(0x6689C1F5),
+                            iconPath: 'assets/images/instagram_icon.png',
+                          ),
                         ],
                       ),
                     ),
