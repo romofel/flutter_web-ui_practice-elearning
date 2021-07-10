@@ -21,9 +21,66 @@ class HomePage extends StatelessWidget {
             child: Column(
               children: [
                 _buildSectionHeader(
-                    title: 'Testimonials',
-                    subtitle: 'Student Community\nFeedback',
-                    action: 'See all feedback'),
+                  title: 'Testimonials',
+                  subtitle: 'Student Community\nFeedback',
+                  action: 'See all feedback',
+                ),
+                const SizedBox(height: 50),
+                Row(
+                  children: [
+                    Container(
+                      width: 431,
+                      height: 383,
+                      padding: const EdgeInsets.only(
+                        left: 41,
+                        top: 38,
+                        right: 78,
+                        bottom: 38,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(
+                          color: const Color(0xffF0F4F5),
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 104,
+                                height: 104,
+                                child: Image.asset(
+                                  'assets/images/feedback_avatar_1.png',
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              const Spacer(),
+                              SizedBox(
+                                width: 18,
+                                height: 18,
+                                child: Image.asset(
+                                  'assets/images/course_star_icon.png',
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              const SizedBox(width: 6),
+                              const Text(
+                                '5.0',
+                                style: TextStyle(
+                                  color: Color(0xff3A334F),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
