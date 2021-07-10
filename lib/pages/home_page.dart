@@ -32,12 +32,14 @@ class HomePage extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
+                    const SizedBox(height: 32),
                     const SizedBox(
                       width: 301,
                       child: Text(
                         'In-depth and practical lessons in over 100 subjects are available through online certified courses.',
                       ),
                     ),
+                    const SizedBox(height: 32),
                     SizedBox(
                       width: 146,
                       child: Row(
