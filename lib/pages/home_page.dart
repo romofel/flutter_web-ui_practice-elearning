@@ -109,8 +109,8 @@ class HomePage extends StatelessWidget {
           ),
           const SizedBox(height: 128),
           Column(
-            children: const [
-              Text(
+            children: [
+              const Text(
                 'Subscribe Newsletter',
                 style: TextStyle(
                   color: Color(0xff3A334F),
@@ -118,13 +118,64 @@ class HomePage extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              Text(
+              const Text(
                 'Subscribed to our newsletter to get regular update about our courses.',
                 style: TextStyle(
                   color: Color(0xff504A65),
                   fontSize: 18,
                   fontWeight: FontWeight.normal,
                   height: 1.4,
+                ),
+              ),
+              SizedBox(
+                width: 462,
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 288,
+                      height: 77,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(50),
+                            borderSide: const BorderSide(
+                              color: Color(0xffF0F4F5),
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(50),
+                            borderSide: const BorderSide(
+                              color: Color(0xffF0F4F5),
+                            ),
+                          ),
+                          hoverColor: Colors.transparent,
+                          prefixIcon: Container(
+                            width: 30,
+                            height: 24,
+                            padding: const EdgeInsets.symmetric(horizontal: 2),
+                            margin: const EdgeInsets.only(left: 16, right: 8),
+                            alignment: Alignment.center,
+                            child: Center(
+                              child: Image.asset(
+                                'assets/images/subscribe_message_icon.png',
+                                fit: BoxFit.cover,
+                                width: 20,
+                              ),
+                            ),
+                          ),
+                          hintText: 'Enter your mail',
+                          hintStyle: const TextStyle(
+                            color: Color(0xffD9DCE2),
+                            fontSize: 16,
+                            fontWeight: FontWeight.normal,
+                          ),
+                          suffixIcon: SizedBox(height: 77),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
