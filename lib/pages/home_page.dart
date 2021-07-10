@@ -28,89 +28,106 @@ class HomePage extends StatelessWidget {
                 const SizedBox(height: 50),
                 Row(
                   children: [
-                    Container(
-                      width: 431,
-                      height: 383,
-                      padding: const EdgeInsets.only(
-                        left: 41,
-                        top: 38,
-                        right: 78,
-                        bottom: 38,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(
-                          color: const Color(0xffF0F4F5),
-                        ),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              SizedBox(
-                                width: 104,
-                                height: 104,
-                                child: Image.asset(
-                                  'assets/images/feedback_avatar_1.png',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              const Spacer(),
-                              SizedBox(
-                                width: 18,
-                                height: 18,
-                                child: Image.asset(
-                                  'assets/images/course_star_icon.png',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              const SizedBox(width: 6),
-                              const Text(
-                                '5.0',
-                                style: TextStyle(
-                                  color: Color(0xff3A334F),
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.normal,
-                                ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 12),
-                          const Text(
-                            'Edwin Reyes',
-                            style: TextStyle(
-                              color: Color(0xff3A334F),
-                              fontSize: 30,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          const Text(
-                            'Student',
-                            style: TextStyle(
-                              color: Color(0xff504A65),
-                              fontSize: 22,
-                              fontWeight: FontWeight.normal,
-                            ),
-                          ),
-                          const Spacer(),
-                          const Text(
-                            '"I have loved that it\'s giving me the opportunity to learn at my own pace and it\'s also super cost effective!"',
-                            style: TextStyle(
-                              color: Color(0xff504A65),
-                              fontSize: 18,
-                              fontWeight: FontWeight.normal,
-                              height: 1.5,
-                            ),
-                          ),
-                        ],
-                      ),
+                    _buildTestimonialCard(
+                      avatarPath: 'assets/images/feedback_avatar_1.png',
+                      reviews: 5.0,
+                      name: 'Edwin Reyes',
+                      title: 'Student',
+                      content:
+                          '"I have loved that it\'s giving me the opportunity to learn at my own pace and it\'s also super cost effective!"',
                     ),
                   ],
                 ),
               ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container _buildTestimonialCard({
+    required String avatarPath,
+    required double reviews,
+    required String name,
+    required String title,
+    required String content,
+  }) {
+    return Container(
+      width: 431,
+      height: 383,
+      padding: const EdgeInsets.only(
+        left: 41,
+        top: 38,
+        right: 78,
+        bottom: 38,
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: const Color(0xffF0F4F5),
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              SizedBox(
+                width: 104,
+                height: 104,
+                child: Image.asset(
+                  avatarPath,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              const Spacer(),
+              SizedBox(
+                width: 18,
+                height: 18,
+                child: Image.asset(
+                  'assets/images/course_star_icon.png',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              const SizedBox(width: 6),
+              Text(
+                reviews.toStringAsFixed(1),
+                style: const TextStyle(
+                  color: Color(0xff3A334F),
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Text(
+            name,
+            style: const TextStyle(
+              color: Color(0xff3A334F),
+              fontSize: 30,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            title,
+            style: const TextStyle(
+              color: Color(0xff504A65),
+              fontSize: 22,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          const Spacer(),
+          Text(
+            content,
+            style: const TextStyle(
+              color: Color(0xff504A65),
+              fontSize: 18,
+              fontWeight: FontWeight.normal,
+              height: 1.5,
             ),
           ),
         ],
