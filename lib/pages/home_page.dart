@@ -34,7 +34,15 @@ class HomePage extends StatelessWidget {
                       name: 'Edwin Reyes',
                       title: 'Student',
                       content:
-                          '"I have loved that it\'s giving me the opportunity to learn at my own pace and it\'s also super cost effective!"',
+                          '“I have loved that it\'s giving me the opportunity to learn at my own pace and it\'s also super cost effective!”',
+                    ),
+                    _buildTestimonialCard(
+                      avatarPath: 'assets/images/feedback_avatar_2.png',
+                      reviews: 4.9,
+                      name: 'Morgan Turner',
+                      title: 'Student',
+                      content:
+                          '“The classes are really well structured and well explained, I came out at the end with actual new knowledge.”',
                     ),
                   ],
                 ),
