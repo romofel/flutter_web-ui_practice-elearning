@@ -27,7 +27,36 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 50),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    Transform.rotate(
+                      angle: 28.25,
+                      child: Container(
+                        width: 82,
+                        height: 82,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white,
+                          boxShadow: <BoxShadow>[
+                            BoxShadow(
+                              color: Color(0x40CCD0DD),
+                              offset: Offset(20, 33),
+                              blurRadius: 74,
+                            ),
+                          ],
+                        ),
+                        child: Center(
+                          child: SizedBox(
+                            width: 24,
+                            height: 24,
+                            child: Image.asset(
+                              'assets/images/right_arrow.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                     _buildTestimonialCard(
                       avatarPath: 'assets/images/feedback_avatar_1.png',
                       reviews: 5.0,
@@ -43,6 +72,31 @@ class HomePage extends StatelessWidget {
                       title: 'Student',
                       content:
                           '“The classes are really well structured and well explained, I came out at the end with actual new knowledge.”',
+                    ),
+                    Container(
+                      width: 82,
+                      height: 82,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                            color: Color(0x40CCD0DD),
+                            offset: Offset(20, 33),
+                            blurRadius: 74,
+                          ),
+                        ],
+                      ),
+                      child: Center(
+                        child: SizedBox(
+                          width: 24,
+                          height: 24,
+                          child: Image.asset(
+                            'assets/images/right_arrow.png',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -683,7 +737,7 @@ class HomePage extends StatelessWidget {
                       ),
                       const SizedBox(width: 8),
                       Text(
-                        '${rating.toStringAsFixed(1)}',
+                        rating.toStringAsFixed(1),
                         style: const TextStyle(
                           color: Color(0xff3A334F),
                           fontSize: 20,
