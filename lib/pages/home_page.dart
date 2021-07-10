@@ -171,7 +171,7 @@ class HomePage extends StatelessWidget {
                             fontSize: 16,
                             fontWeight: FontWeight.normal,
                           ),
-                          suffixIcon: SizedBox(height: 77),
+                          suffixIcon: const SizedBox(height: 77),
                         ),
                       ),
                     ),
@@ -197,7 +197,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: Text(
+                      child: const Text(
                         'Subscribe',
                         style: TextStyle(
                           color: Colors.white,
