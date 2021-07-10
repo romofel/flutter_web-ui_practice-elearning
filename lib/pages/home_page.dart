@@ -20,6 +20,7 @@ class HomePage extends StatelessWidget {
           Container(
             height: 469,
             padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
+            color: Colors.white,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -386,6 +387,7 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 100),
         ],
       ),
     );
