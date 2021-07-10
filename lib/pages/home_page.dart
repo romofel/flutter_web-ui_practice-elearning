@@ -74,14 +74,40 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                Column(
-                  children: [],
-                ),
-                Column(
-                  children: [],
-                ),
-                Column(
-                  children: [],
+                SizedBox(
+                  width: 603,
+                  child: Row(
+                    children: [
+                      Column(
+                        children: const [
+                          Text(
+                            'Product',
+                            style: TextStyle(),
+                          ),
+                          Text(
+                            'Landingpage',
+                            style: TextStyle(),
+                          ),
+                          Text(
+                            'Features',
+                            style: TextStyle(),
+                          ),
+                          Text(
+                            'Documentation',
+                            style: TextStyle(),
+                          ),
+                          Text(
+                            'Referral Program',
+                            style: TextStyle(),
+                          ),
+                          Text(
+                            'Pricing',
+                            style: TextStyle(),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
