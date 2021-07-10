@@ -17,103 +17,107 @@ class HomePage extends StatelessWidget {
           _buildHelpSection(),
           _buildCreatorSection(),
           _buildTestimonialsSection(),
-          Container(
-            height: 469,
-            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
-            color: Colors.white,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+          _buildFooterSection(),
+        ],
+      ),
+    );
+  }
+
+  Container _buildFooterSection() {
+    return Container(
+      height: 469,
+      padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
+      color: Colors.white,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 32,
+                height: 32,
+                child: Image.asset(
+                  'assets/images/e_logo.png',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              const SizedBox(height: 32),
+              const SizedBox(
+                width: 301,
+                child: Text(
+                  'In-depth and practical lessons in over 100 subjects are available through online certified courses.',
+                ),
+              ),
+              const SizedBox(height: 32),
+              SizedBox(
+                width: 146,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SizedBox(
-                      width: 32,
-                      height: 32,
-                      child: Image.asset(
-                        'assets/images/e_logo.png',
-                        fit: BoxFit.cover,
-                      ),
+                    _buildSocialIcon(
+                      colors: const [
+                        Color(0xffFFC1CD),
+                        Color(0xffFF8499),
+                      ],
+                      shadowColor: const Color(0x66FF90A4),
+                      iconPath: 'assets/images/google_icon.png',
                     ),
-                    const SizedBox(height: 32),
-                    const SizedBox(
-                      width: 301,
-                      child: Text(
-                        'In-depth and practical lessons in over 100 subjects are available through online certified courses.',
-                      ),
+                    _buildSocialIcon(
+                      colors: const [
+                        Color(0xffC2B8FF),
+                        Color(0xff8A78F0),
+                      ],
+                      shadowColor: const Color(0x669484F3),
+                      iconPath: 'assets/images/twitter_icon.png',
                     ),
-                    const SizedBox(height: 32),
-                    SizedBox(
-                      width: 146,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          _buildSocialIcon(
-                            colors: const [
-                              Color(0xffFFC1CD),
-                              Color(0xffFF8499),
-                            ],
-                            shadowColor: const Color(0x66FF90A4),
-                            iconPath: 'assets/images/google_icon.png',
-                          ),
-                          _buildSocialIcon(
-                            colors: const [
-                              Color(0xffC2B8FF),
-                              Color(0xff8A78F0),
-                            ],
-                            shadowColor: const Color(0x669484F3),
-                            iconPath: 'assets/images/twitter_icon.png',
-                          ),
-                          _buildSocialIcon(
-                            colors: const [
-                              Color(0xffB8DDFF),
-                              Color(0xff6AB8FF),
-                            ],
-                            shadowColor: const Color(0x6689C1F5),
-                            iconPath: 'assets/images/instagram_icon.png',
-                          ),
-                        ],
-                      ),
+                    _buildSocialIcon(
+                      colors: const [
+                        Color(0xffB8DDFF),
+                        Color(0xff6AB8FF),
+                      ],
+                      shadowColor: const Color(0x6689C1F5),
+                      iconPath: 'assets/images/instagram_icon.png',
                     ),
                   ],
                 ),
-                SizedBox(
-                  width: 603,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      _buildFooterTextColumn(
-                        title: 'Product',
-                        links: [
-                          'Landingpage',
-                          'Features',
-                          'Documentation',
-                          'Referral Program',
-                          'Pricing',
-                        ],
-                      ),
-                      _buildFooterTextColumn(
-                        title: 'Services',
-                        links: [
-                          'Documentation',
-                          'Design',
-                          'Themes',
-                          'Illustrations',
-                          'UI Kit',
-                        ],
-                      ),
-                      _buildFooterTextColumn(
-                        title: 'Company',
-                        links: [
-                          'About',
-                          'Terms',
-                          'Privacy Policy',
-                          'Careers',
-                          '',
-                        ],
-                      ),
-                    ],
-                  ),
+              ),
+            ],
+          ),
+          SizedBox(
+            width: 603,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _buildFooterTextColumn(
+                  title: 'Product',
+                  links: [
+                    'Landingpage',
+                    'Features',
+                    'Documentation',
+                    'Referral Program',
+                    'Pricing',
+                  ],
+                ),
+                _buildFooterTextColumn(
+                  title: 'Services',
+                  links: [
+                    'Documentation',
+                    'Design',
+                    'Themes',
+                    'Illustrations',
+                    'UI Kit',
+                  ],
+                ),
+                _buildFooterTextColumn(
+                  title: 'Company',
+                  links: [
+                    'About',
+                    'Terms',
+                    'Privacy Policy',
+                    'Careers',
+                    '',
+                  ],
                 ),
               ],
             ),
