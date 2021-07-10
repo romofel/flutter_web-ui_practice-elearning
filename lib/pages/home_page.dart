@@ -175,6 +175,37 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    Container(
+                      width: 152,
+                      height: 77,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        gradient: const LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            Color(0xffFFC1CD),
+                            Color(0xffFF8499),
+                          ],
+                        ),
+                        boxShadow: const <BoxShadow>[
+                          BoxShadow(
+                            color: Color(0x80FFBFCB),
+                            offset: Offset(0, 15),
+                            blurRadius: 38,
+                          ),
+                        ],
+                      ),
+                      child: Text(
+                        'Subscribe',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
