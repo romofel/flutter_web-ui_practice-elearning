@@ -16,6 +16,17 @@ class HomePage extends StatelessWidget {
           _buildCoursesSection(),
           _buildHelpSection(),
           _buildCreatorSection(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
+            child: Column(
+              children: [
+                _buildSectionHeader(
+                    title: 'Testimonials',
+                    subtitle: 'Student Community\nFeedback',
+                    action: 'See all feedback'),
+              ],
+            ),
+          ),
         ],
       ),
     );
