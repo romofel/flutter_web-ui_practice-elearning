@@ -22,7 +22,67 @@ class HomePage extends StatelessWidget {
             child: Row(
               children: [
                 Column(
-                  children: [],
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      width: 32,
+                      height: 32,
+                      child: Image.asset(
+                        'assets/images/e_logo.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 301,
+                      child: Text(
+                        'In-depth and practical lessons in over 100 subjects are available through online certified courses.',
+                      ),
+                    ),
+                    SizedBox(
+                      width: 146,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 38,
+                            height: 38,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color(0xffFFC1CD),
+                                  Color(0xffFF8499),
+                                ],
+                              ),
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                  color: Color(0x66FF90A4),
+                                  offset: Offset(0, 10),
+                                  blurRadius: 20,
+                                ),
+                              ],
+                            ),
+                            child: Center(
+                              child: Image.asset(
+                                'assets/images/google_icon.png',
+                                fit: BoxFit.cover,
+                                width: 16,
+                              ),
+                            ),
+                          ),
+                          // Image.asset(
+                          //   'assets/images/twitter_icon.png',
+                          //   fit: BoxFit.cover,
+                          // ),
+                          // Image.asset(
+                          //   'assets/images/instagram_icon.png',
+                          //   fit: BoxFit.cover,
+                          // ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
                 Column(
                   children: [],
