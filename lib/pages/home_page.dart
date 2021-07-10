@@ -42,34 +42,13 @@ class HomePage extends StatelessWidget {
                       width: 146,
                       child: Row(
                         children: [
-                          Container(
-                            width: 38,
-                            height: 38,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  Color(0xffFFC1CD),
-                                  Color(0xffFF8499),
-                                ],
-                              ),
-                              boxShadow: <BoxShadow>[
-                                BoxShadow(
-                                  color: Color(0x66FF90A4),
-                                  offset: Offset(0, 10),
-                                  blurRadius: 20,
-                                ),
-                              ],
-                            ),
-                            child: Center(
-                              child: Image.asset(
-                                'assets/images/google_icon.png',
-                                fit: BoxFit.cover,
-                                width: 16,
-                              ),
-                            ),
+                          _buildSocialIcon(
+                            colors: const [
+                              Color(0xffFFC1CD),
+                              Color(0xffFF8499),
+                            ],
+                            shadowColor: const Color(0x66FF90A4),
+                            iconPath: 'assets/images/google_icon.png',
                           ),
                           // Image.asset(
                           //   'assets/images/twitter_icon.png',
@@ -97,6 +76,39 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Container _buildSocialIcon({
+    required List<Color> colors,
+    required String iconPath,
+    required Color shadowColor,
+  }) {
+    return Container(
+      width: 38,
+      height: 38,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: colors,
+        ),
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            color: shadowColor,
+            offset: const Offset(0, 10),
+            blurRadius: 20,
+          ),
+        ],
+      ),
+      child: Center(
+        child: Image.asset(
+          iconPath,
+          fit: BoxFit.cover,
+          width: 16,
+        ),
       ),
     );
   }
