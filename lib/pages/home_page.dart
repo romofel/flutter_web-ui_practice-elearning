@@ -17,9 +17,11 @@ class HomePage extends StatelessWidget {
           _buildHelpSection(),
           _buildCreatorSection(),
           _buildTestimonialsSection(),
-          Padding(
+          Container(
+            height: 469,
             padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,32 +80,14 @@ class HomePage extends StatelessWidget {
                   width: 603,
                   child: Row(
                     children: [
-                      Column(
-                        children: const [
-                          Text(
-                            'Product',
-                            style: TextStyle(),
-                          ),
-                          Text(
-                            'Landingpage',
-                            style: TextStyle(),
-                          ),
-                          Text(
-                            'Features',
-                            style: TextStyle(),
-                          ),
-                          Text(
-                            'Documentation',
-                            style: TextStyle(),
-                          ),
-                          Text(
-                            'Referral Program',
-                            style: TextStyle(),
-                          ),
-                          Text(
-                            'Pricing',
-                            style: TextStyle(),
-                          ),
+                      _buildFooterTextColumn(
+                        title: 'Product',
+                        links: [
+                          'Landingpage',
+                          'Features',
+                          'Documentation',
+                          'Referral Program',
+                          'Pricing',
                         ],
                       ),
                     ],
@@ -114,6 +98,45 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Column _buildFooterTextColumn({
+    required String title,
+    required List<String> links,
+  }) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            color: Color(0xff3A334F),
+            fontSize: 16,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        for (String link in links)
+          Text(
+            link,
+            style: const TextStyle(
+              color: Color(0xff3A334F),
+              fontSize: 16,
+              fontWeight: FontWeight.normal,
+            ),
+          )
+        // ...links.map<Text>((String link) {
+        //   return Text(
+        //     link,
+        //     style: const TextStyle(
+        //       color: Color(0xff3A334F),
+        //       fontSize: 16,
+        //       fontWeight: FontWeight.normal,
+        //     ),
+        //   );
+        // }).toList(),
+      ],
     );
   }
 
