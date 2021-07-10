@@ -76,6 +76,10 @@ class HomePage extends StatelessWidget {
                               ),
                             ],
                           ),
+                          const Text('Edwin Reyes'),
+                          const Text('Student'),
+                          const Text(
+                              '"I have loved that it\'s giving me the opportunity to learn at my own pace and it\'s also super cost effective!"'),
                         ],
                       ),
                     ),
