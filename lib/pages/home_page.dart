@@ -45,6 +45,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             children: [
@@ -76,10 +77,34 @@ class HomePage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          const Text('Edwin Reyes'),
-                          const Text('Student'),
+                          const SizedBox(height: 12),
                           const Text(
-                              '"I have loved that it\'s giving me the opportunity to learn at my own pace and it\'s also super cost effective!"'),
+                            'Edwin Reyes',
+                            style: TextStyle(
+                              color: Color(0xff3A334F),
+                              fontSize: 30,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'Student',
+                            style: TextStyle(
+                              color: Color(0xff504A65),
+                              fontSize: 22,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                          const Spacer(),
+                          const Text(
+                            '"I have loved that it\'s giving me the opportunity to learn at my own pace and it\'s also super cost effective!"',
+                            style: TextStyle(
+                              color: Color(0xff504A65),
+                              fontSize: 18,
+                              fontWeight: FontWeight.normal,
+                              height: 1.5,
+                            ),
+                          ),
                         ],
                       ),
                     ),
