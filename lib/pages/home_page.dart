@@ -41,6 +41,7 @@ class HomePage extends StatelessWidget {
                     SizedBox(
                       width: 146,
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           _buildSocialIcon(
                             colors: const [
