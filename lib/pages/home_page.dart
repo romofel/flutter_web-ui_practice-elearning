@@ -16,92 +16,96 @@ class HomePage extends StatelessWidget {
           _buildCoursesSection(),
           _buildHelpSection(),
           _buildCreatorSection(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
-            child: Column(
-              children: [
-                _buildSectionHeader(
-                  title: 'Testimonials',
-                  subtitle: 'Student Community\nFeedback',
-                  action: 'See all feedback',
+          _buildTestimonialsSection(),
+        ],
+      ),
+    );
+  }
+
+  Padding _buildTestimonialsSection() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
+      child: Column(
+        children: [
+          _buildSectionHeader(
+            title: 'Testimonials',
+            subtitle: 'Student Community\nFeedback',
+            action: 'See all feedback',
+          ),
+          const SizedBox(height: 50),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Transform.rotate(
+                angle: 28.25,
+                child: Container(
+                  width: 82,
+                  height: 82,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                    boxShadow: <BoxShadow>[
+                      BoxShadow(
+                        color: Color(0x40CCD0DD),
+                        offset: Offset(20, 33),
+                        blurRadius: 74,
+                      ),
+                    ],
+                  ),
+                  child: Center(
+                    child: SizedBox(
+                      width: 24,
+                      height: 24,
+                      child: Image.asset(
+                        'assets/images/right_arrow.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
                 ),
-                const SizedBox(height: 50),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Transform.rotate(
-                      angle: 28.25,
-                      child: Container(
-                        width: 82,
-                        height: 82,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.white,
-                          boxShadow: <BoxShadow>[
-                            BoxShadow(
-                              color: Color(0x40CCD0DD),
-                              offset: Offset(20, 33),
-                              blurRadius: 74,
-                            ),
-                          ],
-                        ),
-                        child: Center(
-                          child: SizedBox(
-                            width: 24,
-                            height: 24,
-                            child: Image.asset(
-                              'assets/images/right_arrow.png',
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    _buildTestimonialCard(
-                      avatarPath: 'assets/images/feedback_avatar_1.png',
-                      reviews: 5.0,
-                      name: 'Edwin Reyes',
-                      title: 'Student',
-                      content:
-                          '“I have loved that it\'s giving me the opportunity to learn at my own pace and it\'s also super cost effective!”',
-                    ),
-                    _buildTestimonialCard(
-                      avatarPath: 'assets/images/feedback_avatar_2.png',
-                      reviews: 4.9,
-                      name: 'Morgan Turner',
-                      title: 'Student',
-                      content:
-                          '“The classes are really well structured and well explained, I came out at the end with actual new knowledge.”',
-                    ),
-                    Container(
-                      width: 82,
-                      height: 82,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                        boxShadow: <BoxShadow>[
-                          BoxShadow(
-                            color: Color(0x40CCD0DD),
-                            offset: Offset(20, 33),
-                            blurRadius: 74,
-                          ),
-                        ],
-                      ),
-                      child: Center(
-                        child: SizedBox(
-                          width: 24,
-                          height: 24,
-                          child: Image.asset(
-                            'assets/images/right_arrow.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
+              ),
+              _buildTestimonialCard(
+                avatarPath: 'assets/images/feedback_avatar_1.png',
+                reviews: 5.0,
+                name: 'Edwin Reyes',
+                title: 'Student',
+                content:
+                    '“I have loved that it\'s giving me the opportunity to learn at my own pace and it\'s also super cost effective!”',
+              ),
+              _buildTestimonialCard(
+                avatarPath: 'assets/images/feedback_avatar_2.png',
+                reviews: 4.9,
+                name: 'Morgan Turner',
+                title: 'Student',
+                content:
+                    '“The classes are really well structured and well explained, I came out at the end with actual new knowledge.”',
+              ),
+              Container(
+                width: 82,
+                height: 82,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.white,
+                  boxShadow: <BoxShadow>[
+                    BoxShadow(
+                      color: Color(0x40CCD0DD),
+                      offset: Offset(20, 33),
+                      blurRadius: 74,
                     ),
                   ],
                 ),
-              ],
-            ),
+                child: Center(
+                  child: SizedBox(
+                    width: 24,
+                    height: 24,
+                    child: Image.asset(
+                      'assets/images/right_arrow.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),
