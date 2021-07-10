@@ -17,6 +17,25 @@ class HomePage extends StatelessWidget {
           _buildHelpSection(),
           _buildCreatorSection(),
           _buildTestimonialsSection(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 72),
+            child: Row(
+              children: [
+                Column(
+                  children: [],
+                ),
+                Column(
+                  children: [],
+                ),
+                Column(
+                  children: [],
+                ),
+                Column(
+                  children: [],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
