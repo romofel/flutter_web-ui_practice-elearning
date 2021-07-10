@@ -79,6 +79,7 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   width: 603,
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       _buildFooterTextColumn(
                         title: 'Product',
@@ -88,6 +89,26 @@ class HomePage extends StatelessWidget {
                           'Documentation',
                           'Referral Program',
                           'Pricing',
+                        ],
+                      ),
+                      _buildFooterTextColumn(
+                        title: 'Services',
+                        links: [
+                          'Documentation',
+                          'Design',
+                          'Themes',
+                          'Illustrations',
+                          'UI Kit',
+                        ],
+                      ),
+                      _buildFooterTextColumn(
+                        title: 'Company',
+                        links: [
+                          'About',
+                          'Terms',
+                          'Privacy Policy',
+                          'Careers',
+                          '',
                         ],
                       ),
                     ],
