@@ -107,6 +107,28 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 128),
+          Column(
+            children: const [
+              Text(
+                'Subscribe Newsletter',
+                style: TextStyle(
+                  color: Color(0xff3A334F),
+                  fontSize: 54,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              Text(
+                'Subscribed to our newsletter to get regular update about our courses.',
+                style: TextStyle(
+                  color: Color(0xff504A65),
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal,
+                  height: 1.4,
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
