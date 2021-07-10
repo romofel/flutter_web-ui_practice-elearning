@@ -119,7 +119,8 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const Text(
-                'Subscribed to our newsletter to get regular update about our courses.',
+                'Subscribed to our newsletter to get regular\nupdate about our courses.',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Color(0xff504A65),
                   fontSize: 18,
@@ -127,6 +128,7 @@ class HomePage extends StatelessWidget {
                   height: 1.4,
                 ),
               ),
+              const SizedBox(height: 38),
               SizedBox(
                 width: 462,
                 child: Row(
@@ -175,6 +177,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    const SizedBox(width: 22),
                     Container(
                       width: 152,
                       height: 77,
